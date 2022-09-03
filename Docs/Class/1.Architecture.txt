@@ -1,0 +1,23 @@
+.NET  Framework -> Windows
+.NET CORE       -> Windows,Linux,OS
+
+Console,Windows,WEB
+C#,VB.net,F#,J#
+==============================================================
+ Client side:
+===============================================================
+ HTML,
+ CSS -> UI Enhancement
+ Javascript  -> JQuery,Angular,React
+ 
+=======================================================
+Server Side:
+ C#
+ WEB Development -> MVC, WEB API,EF,ADO.net
+ 
+==============================================================
+DBMS: 
+ SQL, PL/SQL > 
+ 
+ Relational Databases -> Microsoft SQL Server,Oracle,Postgre
+ No SQL  => COSMOS DB,MONGO DB

@@ -1,0 +1,9 @@
+dotnet --version   > version
+dotnet --help      > General help
+dotnet new --list  > list of project 
+dotnet new console --use-program-main  -> creating a new console project
+dotnet build -> Build the Project
+dotnet run -> Run the compiled project
+dotnet new gitignore  -> Add gitignore file
+==========================================================================
+code . -> open visual code

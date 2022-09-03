@@ -1,0 +1,12 @@
+dotnet sdk  ->  Develop  + Runtime
+dotnet runtime  ->  Runtime 
+Installation of SDK 
+Installation of Visual code 
+Installation of Visual studio  -> 
+    1. Community      free
+	2. Professional   less      license	
+	3. Enterprise     highest   license
+ 
+Installation of GIT 
+GIT -> Version 
+GITHUB -> Free(public),Enterprise(Private)
