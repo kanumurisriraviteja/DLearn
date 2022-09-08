@@ -10,3 +10,7 @@ Installation of Visual studio  ->
 Installation of GIT 
 GIT -> Version 
 GITHUB -> Free(public),Enterprise(Private)
+
+===========================================================
+versioniong of the sw
+how to use Visual code and Visual studio

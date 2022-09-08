@@ -1,0 +1,24 @@
+Data Types:
+   1. values    int,double,float              > single place holder
+   2. reference  array,list,linkedlist        > multiple data
+===========================================================================
+true/ false        : bool
+non numerical data :     char, string
+
+numerical:
+==============================
+
+ sbyte > short  > int > float > double > decimal   (-,+)
+ byte  > ushort > uint > ulong
+
+=================================
+Byte , bit 
+1 Byte = 8 bits 
+you can upwards, not backwards 
+===============================================
+byte  8  -> int  32  implict  (lower to higher)
+
+int 32   ->  byte  8  Exception   
+  
+Explicit type casting:  (higher to lower)  => loose data
+    

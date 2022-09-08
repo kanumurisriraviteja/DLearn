@@ -1,4 +1,5 @@
-1.Learn High Level Architecture of .NET
-2.Installation of Tools, Basic GIT  - Hello World
-3..NET Program Execution  
-4.
+1. Learn High Level Architecture of .NET
+2. Installation of Tools, Basic GIT  - Hello World
+3. GIT Installation, pull request
+4. .NET Program Execution, CLR,CTS,Comments,Variables (local,global)
+5. Data Types

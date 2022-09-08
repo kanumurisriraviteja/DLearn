@@ -7,3 +7,18 @@ dotnet run -> Run the compiled project
 dotnet new gitignore  -> Add gitignore file
 ==========================================================================
 code . -> open visual code
+
+
+visual code/visual studio : f5 > break points  f10 line by line, f11 within the method and execute
+C# is Intermediate code, object oriented language, 
+   CLR  common language runtime -> clean up of objects
+   CTS common type spec 
+
+dll -> dynamic linked library
+
+Comments : //   /* ===== */
+
+Variable : local, class level/global
+The preference is always local. If you don't have the Variable defined locally then global is searched for  
+
+methods Introduction

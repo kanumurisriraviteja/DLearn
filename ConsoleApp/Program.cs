@@ -1,8 +1,13 @@
-﻿namespace ConsoleApp;
+﻿using ConsoleApp.Core;
+
+namespace ConsoleApp;
 class Program
 {
     static void Main(string[] args)
-    {
-        Console.WriteLine("Hello, World!");
+     {         
+
+       DataType d = new DataType();
+        d.DTL();
+        Console.ReadLine();
     }
 }
