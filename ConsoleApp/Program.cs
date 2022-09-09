@@ -4,10 +4,11 @@ namespace ConsoleApp;
 class Program
 {
     static void Main(string[] args)
-     {         
+    {
 
-       DataType d = new DataType();
-        d.DTL();
+        //    DataType d = new DataType();
+        Operators d = new Operators();
+        d.Learn();
         Console.ReadLine();
     }
 }

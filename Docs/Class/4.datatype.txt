@@ -22,3 +22,5 @@ int 32   ->  byte  8  Exception
   
 Explicit type casting:  (higher to lower)  => loose data
     
+var    > you can store any data format at compile time 
+dynamic > you can store any data format at run time
