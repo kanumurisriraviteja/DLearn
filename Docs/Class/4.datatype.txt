@@ -24,3 +24,8 @@ Explicit type casting:  (higher to lower)  => loose data
     
 var    > you can store any data format at compile time 
 dynamic > you can store any data format at run time
+
+
+void  > empty value/no value
+ 
+// Arithmatic > Relational > Bitwise > Logical OPerators > Assignment

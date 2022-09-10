@@ -1,0 +1,11 @@
+static 
+   > class
+   > variables
+   > method
+
+non static/ instance 
+
+1. In a static class everything should be static 
+2. In a non static > no restriction
+3. If you want to access a non static variable/method, you should do it via the object 
+4. If you want to access a static variable/method you should call it via the class name
