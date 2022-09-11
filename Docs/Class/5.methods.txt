@@ -1,11 +1,31 @@
 static 
    > class
    > variables
-   > method
+   > method  > constructor
 
 non static/ instance 
 
 1. In a static class everything should be static 
-2. In a non static > no restriction
+2. In a non static class> no restriction
 3. If you want to access a non static variable/method, you should do it via the object 
 4. If you want to access a static variable/method you should call it via the class name
+
+
+===============================================================================================
+constructor:
+
+**this is first statement of execution
+
+   1. The name should be same as that of the class name 
+   2. It would not have any return type
+
+   3. static  constructor          > It is invoked when the class name is seen for the first time  
+                                   > It is called only once throgh out the program execution
+                                   > static class , non static class
+
+   4. Non static constructor       > It is invoked when the instance/object is created 
+                                   > It is invoked everytime the object is created  
+                                   > only in non static class
+
+===============================================================================================
+   

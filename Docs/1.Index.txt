@@ -3,5 +3,5 @@
 3. GIT Installation, pull request
 4. .NET Program Execution, CLR,CTS,Comments,Variables (local,global)
 5. Data Types 
-6. Operators
+6. Operators > arithmatic,relational,bitwise
 7. static variable,methods, non static variables,non static methods
