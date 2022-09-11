@@ -1,0 +1,6 @@
+class, variable, method
+
+1. private       >   scope would be limited to the same class , outside of the class it is not accessable 
+2. public        >   scope would be the through out the program
+3. protected     >   scope would be only for the inherited members
+4. internal      >   scope would be in the same assembly
