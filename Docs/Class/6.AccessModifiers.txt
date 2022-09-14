@@ -1,6 +1,10 @@
 class, variable, method
 
-1. private       >   scope would be limited to the same class , outside of the class it is not accessable 
-2. public        >   scope would be the through out the program
-3. protected     >   scope would be only for the inherited members
+1. private       >   scope would be limited to the same class , outside of the class variables/methods are not accessable 
+2. public        >   scope would be the through out the program   >> no restriction
+3. protected     >   scope would be only for same class, inherited members within the same assembly
 4. internal      >   scope would be in the same assembly
+5. protected internal  > protected + internal , The scope would be in the same assembly or for the inherited members
+
+assembly : for  all the sam namespaces it would be in the same assembly
+//    private 
