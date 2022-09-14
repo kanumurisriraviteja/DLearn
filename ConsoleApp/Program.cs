@@ -8,7 +8,11 @@ public class Program
     {
         Console.WriteLine("==Hello World==");
         Program p = new Program();
-        p.Learn();
+        // p.Learn();
+
+        DecL decL = new DecL();
+        decL.DecisionMaking();
+        
         Console.WriteLine("==Bye==");
         Console.ReadLine();
     }
