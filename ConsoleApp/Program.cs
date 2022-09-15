@@ -8,11 +8,10 @@ public class Program
     {
         Console.WriteLine("==Hello World==");
         Program p = new Program();
-        // p.Learn();
 
-        DecL decL = new DecL();
-        decL.DecisionMaking();
-        
+        Lpl l1 = new Lpl();
+        l1.Learn();
+
         Console.WriteLine("==Bye==");
         Console.ReadLine();
     }
@@ -68,6 +67,12 @@ public class Program
 
     }
 
+
+    private void Logic()
+    {
+        DecL decL = new DecL();
+        decL.Learn();
+    }
     private void Learn()
     {
         // Pracitical use of static and non static varaibles -- start

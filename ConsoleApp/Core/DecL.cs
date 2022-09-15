@@ -8,7 +8,7 @@ namespace ConsoleApp.Core
 {
     class DecL
     {
-        public void DecisionMaking()
+        public void Learn()
         {
 
             Console.WriteLine("Enter first ip");
