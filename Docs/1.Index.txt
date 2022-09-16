@@ -8,4 +8,16 @@
 8. ACcess modifiers  > private,public,protected,internal,protected internal
 9. if -else, switch, conditional expression
    loops: for, foreach, while, do while
-   
+10. string , string builder
+11. collections  data structues
+          array
+          enum
+          struct
+          list 
+          IEnumerable
+          ICollection,
+          stack
+          queue
+          dictionary
+          linked list
+12. oops principles

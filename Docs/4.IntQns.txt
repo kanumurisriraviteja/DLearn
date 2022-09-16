@@ -1,0 +1,7 @@
+1. what is the difference between ?:, ?, ??
+    ? : -> conditional Operators     () ? () :()
+    ?   -> nullable                  int? 
+    ??  -> NUll Coalescing Operator
+2.                
+
+

@@ -8,9 +8,7 @@ public class Program
     {
         Console.WriteLine("==Hello World==");
         Program p = new Program();
-
-        Lpl l1 = new Lpl();
-        l1.Learn();
+        p.Logic();
 
         Console.WriteLine("==Bye==");
         Console.ReadLine();
@@ -72,6 +70,8 @@ public class Program
     {
         DecL decL = new DecL();
         decL.Learn();
+        // Lpl l1 = new Lpl();
+        // l1.Learn();
     }
     private void Learn()
     {

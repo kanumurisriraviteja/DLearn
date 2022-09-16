@@ -69,6 +69,28 @@ class DataType
         // Reference Data type -- end 
 
 
+
+        // NUllable datatypes
+
+
+        int? i0 = 10;
+        //int i1 = null;  // Error
+        int? i2 = null;
+        Nullable<int> i3 = null;
+
+
+        string? s1 = null;
+        string? s2 = null;
+        s1.ToLower();
+
+        double? num1 = null;
+        double num3;
+        num3 = num1 ?? 5.34;
+        if (num1 == null)
+            num3 = 5.34;
+        else
+            num3 = (double)num1;
+
     }
 
 }

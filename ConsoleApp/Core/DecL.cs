@@ -11,6 +11,18 @@ namespace ConsoleApp.Core
         public void Learn()
         {
 
+            string sIp = string.Empty;
+            do
+            {
+                Calculator();
+                Console.WriteLine("press Y/ y/ YES/yEs to contiue");
+                sIp = Console.ReadLine();
+            }
+            while (sIp.ToLower()=="y" || sIp.ToLower()=="yes");
+        }
+
+        private void Calculator()
+        {
             Console.WriteLine("Enter first ip");
             string a0 = Console.ReadLine();
             int a1 = Convert.ToInt32(a0);
@@ -27,13 +39,13 @@ namespace ConsoleApp.Core
             //a5 = Learnife(a1, a3, a4, a5);
 
             // Approach - 3 switch
-            a5 = Learnsw(a1, a3, a4, a5);
+            // a5 = Learnsw(a1, a3, a4, a5);
 
 
             //Approach - 4 using conditional operator
             //a5 = a4 == "+" ? Add(a1, a3) : 0;
             a5 = a4 == "+" ? Add(a1, a3) : (a4 == "-" ? Sub(a1, a3) : (a4 == "*" ? Mult(a1, a3) : (a4 == "/" ? Div(a1, a3) : 0)));
-
+            Console.WriteLine(a5);
         }
 
         private int Learnsw(int a1, int a3, string a4, int a5)

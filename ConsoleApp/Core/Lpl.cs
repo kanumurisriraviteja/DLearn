@@ -13,8 +13,8 @@ namespace ConsoleApp.Core
         {
             //floop();
             //feloop();
-            wloop();
-
+            // wloop();
+            // dwloop();
         }
         public void floop()
         {
@@ -106,7 +106,7 @@ namespace ConsoleApp.Core
                 {
                     Console.WriteLine("welcome");
                     i++;
-                }                 
+                }
                 else
                 {
                     Console.WriteLine(i);
