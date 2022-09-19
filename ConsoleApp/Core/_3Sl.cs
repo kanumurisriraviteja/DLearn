@@ -1,11 +1,11 @@
 namespace ConsoleApp.Core;
 
-static class Sl
+static class _3Sl
 {
     public static int a0 = 1;
     // int a1 = 2;   // Error > non static variables are not possible in static class
 
-    static Sl()
+    static _3Sl()
     {
         Console.WriteLine("static constructor in Sl class");
     }

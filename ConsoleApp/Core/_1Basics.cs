@@ -1,6 +1,6 @@
 namespace ConsoleApp.Core;
 
-public class Basics
+public class _1Basics
 {
 
     public void BL()

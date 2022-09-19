@@ -2,12 +2,12 @@ namespace ConsoleApp.Core;
 using System.Text;
 
 
-class StrLearn
+class _8StrLearn
 {
     public void Learn()
     {
-        // StringOpeations1();
-        // StringOpeations2();
+        StringOpeations1();
+        StringOpeations2();
         StringOpeations3();
 
     }

@@ -1,6 +1,6 @@
 namespace ConsoleApp.Core;
 
-public class Nsl
+public class _4Nsl
 {
     public static int a0 = 1;
     public int a1 = 2;
@@ -9,11 +9,11 @@ public class Nsl
     internal int a4 = 36;
     protected internal int a5 = 66;
 
-    static Nsl()
+    static _4Nsl()
     {
         Console.WriteLine("static constructor in NSL class");
     }
-    public Nsl()
+    public _4Nsl()
     {
         Console.WriteLine("Non static constructor in NSL class");
     }
@@ -21,9 +21,9 @@ public class Nsl
     public static void Learn()
     {
         int a2 = 3;
-        Console.WriteLine(Nsl.a0);
+        Console.WriteLine(_4Nsl.a0);
         // //  Console.WriteLine(a1);  // Error object reference is required
-        Nsl o1 = new Nsl();
+        _4Nsl o1 = new _4Nsl();
         // Console.WriteLine(o1.a1);   // this is how non static variables are being accessed.
 
         // // Learn1();// Error object reference is required

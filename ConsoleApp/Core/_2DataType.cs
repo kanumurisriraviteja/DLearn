@@ -1,6 +1,6 @@
 namespace ConsoleApp.Core;
 
-class DataType
+class _2DataType
 {
 
     public void Learn()
@@ -80,12 +80,13 @@ class DataType
         //int i1 = null;  // Error
         int? i2 = null;
         Nullable<int> i3 = null;
-        Console.WriteLine(i3.Value);
+        if (i3.HasValue)
+            Console.WriteLine(i3.Value);
 
 
         string? s1 = null;
         string? s2 = null;
-        s1.ToLower();
+        //s1.ToLower(); Error Null Reference Exception
 
         double? num1 = null;
         double num3;

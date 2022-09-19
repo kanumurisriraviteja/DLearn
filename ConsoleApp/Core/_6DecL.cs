@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp.Core
 {
-    class DecL
+    class _6DecL
     {
         public void Learn()
         {

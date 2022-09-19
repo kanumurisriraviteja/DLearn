@@ -1,6 +1,6 @@
 namespace ConsoleApp.Core;
 
-class DatastrLearn
+class _9DatastrLearn
 {
 
     public void Learn()
@@ -14,6 +14,10 @@ class DatastrLearn
 
         int[] i1 = new int[] { 41, 31 };
 
+        int[] i2 = i1;
+        i2[0] = 51;
+        Console.WriteLine($"the element in i1 -0 location  is {i1[0]}");
+        Console.WriteLine($"the element in i2 -0 location  is  {i2[0]}");
         
         Console.WriteLine("Arrary for loop");
         for (int i = 0; i < i0.Length; i++)

@@ -1,6 +1,6 @@
 namespace ConsoleApp.Core;
 
-class Operators
+class _5Operators
 {
 
     public void Learn()

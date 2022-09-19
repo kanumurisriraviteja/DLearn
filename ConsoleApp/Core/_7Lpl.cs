@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp.Core
 {
-    class Lpl
+    class _7Lpl
     {
 
         public void Learn()
         {
-            //floop();
-            //feloop();
-            // wloop();
-            // dwloop();
+            floop();
+            feloop();
+            wloop();
+            dwloop();
         }
         public void floop()
         {

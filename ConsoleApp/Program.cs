@@ -8,6 +8,7 @@ public class Program
     {
         Console.WriteLine("==Hello World==");
         Program p = new Program();
+        //p.DOM();
         p.Logic();
 
         Console.WriteLine("==Bye==");
@@ -16,36 +17,36 @@ public class Program
 
     private void DOM()
     {
-        DataType d0 = new DataType();
+        _2DataType d0 = new _2DataType();
         d0.Learn();
 
-        Operators d1 = new Operators();
+        _5Operators d1 = new _5Operators();
         d1.Learn();
 
         // static class - start
         // Accessing the static variables/methods   -- 1st time 
-        Console.WriteLine(Sl.a0); // calling static variable
-        Sl.Learn(); // calling static method, static class
+        Console.WriteLine(_3Sl.a0); // calling static variable
+        _3Sl.Learn(); // calling static method, static class
 
 
         // Accessing the static variables/methods   -- 2nd time 
-        Console.WriteLine(Sl.a0);
-        Sl.Learn();
+        Console.WriteLine(_3Sl.a0);
+        _3Sl.Learn();
         // static class - end
 
 
         // Non static class -static members- start
-        Console.WriteLine(Nsl.a0);  // should be access via the class name;
-        Nsl.Learn();   // static method , non static class
+        Console.WriteLine(_4Nsl.a0);  // should be access via the class name;
+        _4Nsl.Learn();   // static method , non static class
 
 
-        Console.WriteLine(Nsl.a0);  // should be access via the class name;
-        Nsl.Learn();   // static method , non static class
+        Console.WriteLine(_4Nsl.a0);  // should be access via the class name;
+        _4Nsl.Learn();   // static method , non static class
                        // Non static class - end
 
         // Non static class -non static members- start   -- start
         // Accessing the non static variables/methods     -- 1st time
-        Nsl d2 = new Nsl();
+        _4Nsl d2 = new _4Nsl();
         // Console.WriteLine(d.a0); // Error can be accesed.
         // Console.WriteLine(Nsl.a1);  // Error should be accessed via the object
         Console.WriteLine(d2.a1);
@@ -56,7 +57,7 @@ public class Program
 
 
         // Accessing the non static variables/methods     -- 2st time
-        Nsl d3 = new Nsl();
+        _4Nsl d3 = new _4Nsl();
         Console.WriteLine(d3.a1);
         d3.Learn1();
 
@@ -68,15 +69,14 @@ public class Program
 
     private void Logic()
     {
-        // DecL decL = new DecL();
-        // decL.Learn();
-        Lpl l1 = new Lpl();
+        _6DecL decL = new _6DecL();
+        decL.Learn();
+        _7Lpl l1 = new _7Lpl();
         l1.Learn();
-        //   StrLearn s = new StrLearn();
-        //   s.Learn();
-
-        // DatastrLearn ds = new DatastrLearn();
-        // ds.Learn();
+        _8StrLearn s = new _8StrLearn();
+        s.Learn();
+        _9DatastrLearn ds = new _9DatastrLearn();
+        ds.Learn();
 
 
     }
