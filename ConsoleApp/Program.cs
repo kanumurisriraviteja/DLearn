@@ -68,10 +68,17 @@ public class Program
 
     private void Logic()
     {
-        DecL decL = new DecL();
-        decL.Learn();
-        // Lpl l1 = new Lpl();
-        // l1.Learn();
+        // DecL decL = new DecL();
+        // decL.Learn();
+        Lpl l1 = new Lpl();
+        l1.Learn();
+        //   StrLearn s = new StrLearn();
+        //   s.Learn();
+
+        // DatastrLearn ds = new DatastrLearn();
+        // ds.Learn();
+
+
     }
     private void Learn()
     {

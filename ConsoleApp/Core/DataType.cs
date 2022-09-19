@@ -7,6 +7,10 @@ class DataType
     {
 
         // value data types  -- start 
+
+        int i, j = 10, k = 100;
+        // Console.WriteLine(i); // Error i can't be assigned as it is not assigned
+
         // Implicit Type casting
         byte a0 = 250;
         int b0 = a0;
@@ -72,11 +76,11 @@ class DataType
 
         // NUllable datatypes
 
-
         int? i0 = 10;
         //int i1 = null;  // Error
         int? i2 = null;
         Nullable<int> i3 = null;
+        Console.WriteLine(i3.Value);
 
 
         string? s1 = null;

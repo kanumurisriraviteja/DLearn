@@ -36,9 +36,17 @@ namespace ConsoleApp.Core
             int a1 = Convert.ToInt32(a0);
 
             // l3   -- 239 >> 932  >> This code reverses the number entered
-            //for (int i = 1; i <= a1; a1 = a1 / 10)
-            //    Console.Write(a1 % 10);
+            for (int i = 1; i <= a1; a1 = a1 / 10)
+                Console.Write(a1 % 10);
 
+            Console.Write("Reverse by array");
+            char[] b0 = a0.ToCharArray();
+
+            for (int i = b0.Length - 1; i >= 0; i--)
+            {
+                Console.Write(b0[i]);
+            }
+            
 
             ////l2 prints all the alternate no less than the given no
             //for (int i = 1; i <= a1; i = i + 2)

@@ -5,12 +5,12 @@
 5. Data Types 
 6. Operators > arithmatic,relational,bitwise
 7. static variable,methods, non static variables,non static methods
-8. ACcess modifiers  > private,public,protected,internal,protected internal
+8. Access modifiers  > private,public,protected,internal,protected internal
 9. if -else, switch, conditional expression
    loops: for, foreach, while, do while
-10. string , string builder
+10. string , string Builder
 11. collections  data structues
-          array
+          array : single dimentional , multi (2d,3d), jaggged array
           enum
           struct
           list 

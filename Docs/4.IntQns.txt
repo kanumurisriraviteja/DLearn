@@ -2,6 +2,6 @@
     ? : -> conditional Operators     () ? () :()
     ?   -> nullable                  int? 
     ??  -> NUll Coalescing Operator
-2.                
+2. string is immutable where as string builder is mutable               
 
 
