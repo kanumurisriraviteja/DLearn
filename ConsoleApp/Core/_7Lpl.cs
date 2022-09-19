@@ -46,20 +46,21 @@ namespace ConsoleApp.Core
             {
                 Console.Write(b0[i]);
             }
-            
 
-            ////l2 prints all the alternate no less than the given no
-            //for (int i = 1; i <= a1; i = i + 2)
-            //{
-            //    Console.WriteLine(i);
-            //}
-            //Console.WriteLine("====================================");
 
-            //// l1  prints all the nos less than the given no
-            //for (int i = 1; i <= a1; i++)
-            //{
-            //    Console.WriteLine(i);
-            //}
+            //l2 prints all the alternate no less than the given no
+            Console.WriteLine("l2 prints all the alternate no less than the given no");
+            for (int i = 1; i <= a1; i = i + 2)
+            {
+                Console.WriteLine(i);
+            }
+
+
+            Console.WriteLine("l1  prints all the nos less than the given no");
+            for (int i = 1; i <= a1; i++)
+            {
+                Console.WriteLine(i);
+            }
         }
 
         public void feloop()

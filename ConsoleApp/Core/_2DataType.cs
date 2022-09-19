@@ -8,10 +8,10 @@ class _2DataType
 
         // value data types  -- start 
 
-        int i, j = 10, k = 100;
+        int i, j = 10, k = 100;  // Assign in the same line
         // Console.WriteLine(i); // Error i can't be assigned as it is not assigned
 
-        // Implicit Type casting
+        // Implicit Type casting >> lower datatype to higher data type
         byte a0 = 250;
         int b0 = a0;
         Console.WriteLine(a0);
@@ -21,7 +21,7 @@ class _2DataType
         System.Type type = typeof(int);
         Console.WriteLine(type);
 
-        // Explicit Type casting
+        // Explicit Type casting >> higher datatype to lower data type
         int a1 = 250;
         byte b1 = (byte)a1;
         Console.WriteLine(a1);
@@ -40,6 +40,8 @@ class _2DataType
         char a4 = 'y';
         Console.WriteLine(a4);
 
+
+        // value assignmet and re-assignment
         int a7;
         a7 = 10;
         Console.WriteLine(a7);
@@ -56,16 +58,20 @@ class _2DataType
 
 
         // Reference Data type -- start 
+        // for var the memory allocation is at the compile time
         var a5 = 1;
         var b5 = 'Y';
         Console.WriteLine(a5);
         Console.WriteLine(b5);
 
+        // for dynamic the memory allocation is at the run time
         dynamic a6 = 2;
         dynamic b6 = "yessss";
 
         string b4 = "yes";
         Console.WriteLine(b4);
+
+        // Object
         object obj = 10;
         object obj1 = "test";
         object obj2 = new Object();
@@ -74,12 +80,13 @@ class _2DataType
 
 
 
-        // NUllable datatypes
-
+        // Nullable datatypes
         int? i0 = 10;
         //int i1 = null;  // Error
         int? i2 = null;
         Nullable<int> i3 = null;
+
+        // HasValue check if we have value or not
         if (i3.HasValue)
             Console.WriteLine(i3.Value);
 

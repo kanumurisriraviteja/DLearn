@@ -7,10 +7,9 @@ public class Program
     static void Main(string[] args)
     {
         Console.WriteLine("==Hello World==");
-        Program p = new Program();
+        Program p = new Program();    
         //p.DOM();
         p.Logic();
-
         Console.WriteLine("==Bye==");
         Console.ReadLine();
     }
@@ -19,9 +18,6 @@ public class Program
     {
         _2DataType d0 = new _2DataType();
         d0.Learn();
-
-        _5Operators d1 = new _5Operators();
-        d1.Learn();
 
         // static class - start
         // Accessing the static variables/methods   -- 1st time 
@@ -42,7 +38,7 @@ public class Program
 
         Console.WriteLine(_4Nsl.a0);  // should be access via the class name;
         _4Nsl.Learn();   // static method , non static class
-                       // Non static class - end
+                         // Non static class - end
 
         // Non static class -non static members- start   -- start
         // Accessing the non static variables/methods     -- 1st time
@@ -55,7 +51,6 @@ public class Program
         d2.Learn1();     // instance method
         d2.Learn1();     // instance method
 
-
         // Accessing the non static variables/methods     -- 2st time
         _4Nsl d3 = new _4Nsl();
         Console.WriteLine(d3.a1);
@@ -63,10 +58,19 @@ public class Program
 
         // Non static class -non static members- start   -- end
 
+        // Pracitical use of static and non static varaibles -- start
+        UsrOne u1 = new UsrOne();
+        u1.Learn();
+
+        UsrTwo u2 = new UsrTwo();
+        u2.Learn();
+        // Pracitical use of static and non static varaibles -- end
+
+        _5Operators d1 = new _5Operators();
+        d1.Learn();
+
 
     }
-
-
     private void Logic()
     {
         _6DecL decL = new _6DecL();
@@ -80,17 +84,7 @@ public class Program
 
 
     }
-    private void Learn()
-    {
-        // Pracitical use of static and non static varaibles -- start
-        UsrOne u1 = new UsrOne();
-        u1.Learn();
 
-        UsrTwo u2 = new UsrTwo();
-        u2.Learn();
-        // Pracitical use of static and non static varaibles -- end
-
-    }
 
 
 }

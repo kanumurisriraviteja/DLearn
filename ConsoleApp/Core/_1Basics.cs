@@ -17,6 +17,8 @@ public class _1Basics
         Console.WriteLine("3");
         Console.Write("4");
 
+
+        // How to read from console
         string input = Console.ReadLine();
         int a0 = Convert.ToInt32(input);
         Console.WriteLine("The data entered by the user is {0}", a0);

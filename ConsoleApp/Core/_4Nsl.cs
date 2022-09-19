@@ -22,15 +22,19 @@ public class _4Nsl
     {
         int a2 = 3;
         Console.WriteLine(_4Nsl.a0);
-        // //  Console.WriteLine(a1);  // Error object reference is required
+        //Console.WriteLine(a1);  // Error object reference is required
         _4Nsl o1 = new _4Nsl();
-        // Console.WriteLine(o1.a1);   // this is how non static variables are being accessed.
+        Console.WriteLine(o1.a1);   // this is how non static variables are being accessed.
 
-        // // Learn1();// Error object reference is required
-        // o1.Learn1();
+        //Learn1();// Error object reference is required
+        o1.Learn1(); // public method
 
-        //Learn2();  // Error 
-        // o1.Learn2();
+        //Learn2();  // Error object reference is required
+        o1.Learn2(); // private method
+
+        o1.Learn3();  // protected method
+
+        o1.Learn4();  // internal method
 
     }
 
@@ -38,40 +42,41 @@ public class _4Nsl
     {
         // Accessing the public variables
         int a2 = 3;
-        Console.WriteLine(a0);
-        Console.WriteLine(a1);
+        Console.WriteLine(a0); // accessing class level static variable
+        Console.WriteLine(a1); // accessing class leve non static variable
 
-        // Accessing the private method
+        // Accessing the private method. can be accessed directly without the object reference
         Learn2();
 
-        // Accessing the private variable
+        // Accessing the private variable, the preference is always given to the local variable
         Console.WriteLine(a2);
 
 
         // Accessing the protected method
         Learn3();
         // Accessing the protected variable
-        Console.WriteLine(a3);
+        Console.WriteLine(a3);  // class level protected variable
 
         // Accessing the internal methods/variables
         Console.WriteLine(a4);
         Learn4();
-        Console.WriteLine("==Learn1===");
+        Console.WriteLine("Learn1 Method");
     }
 
     private void Learn2()
     {
+        Console.WriteLine("Learn2 Method");
         Learn3();
-        Console.WriteLine("==Learn2===");
+
     }
 
     protected void Learn3()
     {
-        Console.WriteLine("Learn3");
+        Console.WriteLine("Learn3 Method");
     }
 
     internal void Learn4()
     {
-        Console.WriteLine("Learn4");
+        Console.WriteLine("Learn4 Method");
     }
 }

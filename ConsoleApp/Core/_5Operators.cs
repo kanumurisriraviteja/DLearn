@@ -71,7 +71,7 @@ class _5Operators
             Console.WriteLine("Local AND");
         }
 
-        // Logical OPerator -- end
+        // Logical Operator -- end
 
         Console.WriteLine(30 << 7);
         Console.WriteLine(30 >> 2);

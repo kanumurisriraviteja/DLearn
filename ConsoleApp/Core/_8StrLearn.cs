@@ -136,7 +136,7 @@ class _8StrLearn
         Console.WriteLine(firstname.Equals(lastname));// False
         Console.WriteLine(firstname.Equals(testname));//True
 
-        Console.WriteLine(firstname == lastname);
+        Console.WriteLine(firstname == lastname); //false
 
 
 
@@ -193,8 +193,6 @@ class _8StrLearn
 
         //Check wheter first character of string is same as specified value
         Console.WriteLine(firstname.StartsWith("S")); //True
-
-
 
         //Check whether specified value is the last character of string
         Console.WriteLine(firstname.EndsWith("n")); // False

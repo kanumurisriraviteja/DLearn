@@ -11,17 +11,17 @@ static class _3Sl
     }
 
 
-    // Error > should have parameters
-    // static Sl(int a)
-    // {
+    // Error > constructor overloading with parameters is not possible
+    //static _3Sl(int a)
+    //{
 
-    // }
+    //}
 
     // Error -> static class can't have instance constructor
-    // s1()
-    // {
+    //_3Sl()
+    //{
 
-    // }
+    //}
     public static void Learn()
     {
         int a1 = 2;

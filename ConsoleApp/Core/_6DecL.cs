@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp.Core
 {
+
+    /*
+          Calaculator Application
+     */
     class _6DecL
     {
         public void Learn()
@@ -18,7 +22,7 @@ namespace ConsoleApp.Core
                 Console.WriteLine("press Y/ y/ YES/yEs to contiue");
                 sIp = Console.ReadLine();
             }
-            while (sIp.ToLower()=="y" || sIp.ToLower()=="yes");
+            while (sIp.ToLower() == "y" || sIp.ToLower() == "yes");
         }
 
         private void Calculator()
@@ -36,14 +40,14 @@ namespace ConsoleApp.Core
 
             int a5 = 0;
             // Approach - 1 using if 
-            //a5 = Learnife(a1, a3, a4, a5);
+            a5 = Learnife(a1, a3, a4, a5);
 
             // Approach - 3 switch
-            // a5 = Learnsw(a1, a3, a4, a5);
+            a5 = Learnsw(a1, a3, a4, a5);
 
 
             //Approach - 4 using conditional operator
-            //a5 = a4 == "+" ? Add(a1, a3) : 0;
+            a5 = a4 == "+" ? Add(a1, a3) : 0;
             a5 = a4 == "+" ? Add(a1, a3) : (a4 == "-" ? Sub(a1, a3) : (a4 == "*" ? Mult(a1, a3) : (a4 == "/" ? Div(a1, a3) : 0)));
             Console.WriteLine(a5);
         }
