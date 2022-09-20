@@ -209,11 +209,11 @@ class _8StrLearn
         //It removes starting and ending white spaces from  string.
         Console.WriteLine(firstname.Trim());//Steven Clark
 
-
-        Console.WriteLine(string.Join("", firstname.Reverse()));
         //kralC nevetS
         //Reverse the string
         //Reverse() will only return the IEnumerable Array.
+        Console.WriteLine(string.Join("", firstname.Reverse()));
+        
 
         string[] starray = new string[]{"Down the way nights are dark",
             "And the sun shines daily on the mountain top",

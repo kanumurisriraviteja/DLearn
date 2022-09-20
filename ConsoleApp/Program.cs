@@ -1,5 +1,6 @@
 ﻿using ConsoleApp.Core;
 using ConsoleApp.Test;
+using ConsoleApp.PracProg;
 
 namespace ConsoleApp;
 public class Program
@@ -7,11 +8,24 @@ public class Program
     static void Main(string[] args)
     {
         Console.WriteLine("==Hello World==");
-        Program p = new Program();    
-        //p.DOM();
-        p.Logic();
+        Program p = new Program();
+        p.Learn();
+        //p.Practise();
+
         Console.WriteLine("==Bye==");
         Console.ReadLine();
+    }
+
+    private void Practise()
+    {
+        _1ProLearn  p1 = new _1ProLearn();
+        p1.Learn();
+    }
+
+    private void Learn()
+    {
+        // DOM();
+        Logic();
     }
 
     private void DOM()
@@ -73,12 +87,12 @@ public class Program
     }
     private void Logic()
     {
-        _6DecL decL = new _6DecL();
-        decL.Learn();
-        _7Lpl l1 = new _7Lpl();
-        l1.Learn();
-        _8StrLearn s = new _8StrLearn();
-        s.Learn();
+        // _6DecL decL = new _6DecL();
+        // decL.Learn();
+        // _7Lpl l1 = new _7Lpl();
+        // l1.Learn();
+        // _8StrLearn s = new _8StrLearn();
+        // s.Learn();
         _9DatastrLearn ds = new _9DatastrLearn();
         ds.Learn();
 

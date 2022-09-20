@@ -1,0 +1,1 @@
+Array -> same data type, index based, fixed length
