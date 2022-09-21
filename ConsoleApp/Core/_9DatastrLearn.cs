@@ -1,19 +1,23 @@
+using ConsoleApp.Test;
+using System.Collections;
+
 namespace ConsoleApp.Core;
 
 class _9DatastrLearn
 {
-    //Array,ArrarList,List,IEnumerable,IQueryable,ICollection,HashTable,Dictionary,Queue,Stack.
-    // struct,enum,class
     public void Learn()
     {
         //ArrayLearn();
+        //ArrayListLearn();
+
+        ListLearn();
     }
 
     private void ArrayLearn()
     {
         oneDArray();
-        twoDArrary();
-        JaggedArrary();
+        // twoDArrary();
+        // JaggedArrary();
     }
     private void oneDArray()
     {
@@ -29,6 +33,16 @@ class _9DatastrLearn
         i2[0] = 51;
         Console.WriteLine($"the element in i1 -0 location  is {i1[0]}");
         Console.WriteLine($"the element in i2 -0 location  is  {i2[0]}");
+
+        // If we take a clone of the memory then it would create a new copy
+        int[] i3 = i1.Clone() as int[];
+        i3[0] = 61;
+        Console.WriteLine($"the element in i1 -0 location  is {i1[0]}");
+        Console.WriteLine($"the element in i2 -0 location  is  {i2[0]}");
+        Console.WriteLine($"the element in i3 -0 location  is  {i3[0]}");
+
+
+        int[] i4 = { 1, 2, 3 };
 
         Console.WriteLine("Arrary for loop");
         for (int i = 0; i < i0.Length; i++)
@@ -47,6 +61,33 @@ class _9DatastrLearn
         //{
         //    Console.WriteLine(i0[i]);
         //}
+
+
+        Employee e1 = new Employee();
+        e1.EmployyeId = 1;
+        e1.Name = "Yag";
+        e1.Salary = 5;
+        Employee e2 = new Employee() { EmployyeId = 2, Name = "Durga", Salary = 6 };
+
+
+        Employee[] e3 = new Employee[2];
+        e3[0] = e1;
+        e3[1] = e2;
+
+        Employee[] e4 = new Employee[] { e1, e2 };
+
+        foreach (var item in e4)
+        {
+            Console.WriteLine($"Employee data is {item.EmployyeId},{item.Name},{item.Salary}");
+        }
+
+
+        for (int i = 0; i < e4.Length; i++)
+        {
+            Console.WriteLine($"Employee data is {e4[i].EmployyeId},{e4[i].Name},{e4[i].Salary}");
+        }
+
+
     }
     private void twoDArrary()
     {
@@ -111,5 +152,59 @@ class _9DatastrLearn
         }
         int[][] i8 = new int[][] { new int[] { 1, 2, 3 }, new int[] { 4 }, new int[] { 5, 6 } };
     }
+    private void ArrayListLearn()
+    {
 
+        ArrayList a1 = new ArrayList();
+        a1.Add(1);
+        a1.Add("Teja");
+        a1.Add(5.2f);
+
+
+        a1[1] = "Ravi";
+
+        foreach (var item in a1)
+        {
+            Console.WriteLine(item);
+        }
+
+        for (int i = 0; i < a1.Count; i++)
+        {
+            Console.WriteLine(a1[i]);
+        }
+
+        ArrayList a2 = new ArrayList() { 1, "Teja", 5.2f };
+        a2.Add('a');
+
+
+    }
+    private void ListLearn()
+    {
+        List<int> l1 = new List<int>();
+        l1.Add(1);
+        l1.Add(2);
+        l1.Add(3);
+        l1.Add(4);
+
+        l1[0] = 5;
+        foreach (var item in l1)
+        {
+            Console.WriteLine(item);
+        }
+
+        for (int i = 0; i < l1.Count; i++)
+        {
+            Console.WriteLine(l1[i]);
+        }
+
+        List<int> l2 = new List<int>() { 1, 2, 3 };
+        l2.Add(4);
+
+        List<int> l3 = new List<int>();
+        l3[0] = 1;
+        l3[1] = 2;
+        l3[2] = 3;
+
+       
+    }
 }

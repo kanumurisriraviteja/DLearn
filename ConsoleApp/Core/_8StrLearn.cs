@@ -223,6 +223,9 @@ class _8StrLearn
 
         string str = String.Join("\n", starray);
 
+        char[] c1 = { 'a', 'b', 'c' };
+        Console.WriteLine(string.Join("", c1)); // abc
+
     }
 
 }
