@@ -9,8 +9,11 @@ class _9DatastrLearn
     {
         //ArrayLearn();
         //ArrayListLearn();
-
-        ListLearn();
+        //ListLearn();
+        //EQCLearn();
+        //HashSetLearn();
+        //HashTableDictLearn();
+        SQLearn();
     }
 
     private void ArrayLearn()
@@ -162,6 +165,7 @@ class _9DatastrLearn
 
 
         a1[1] = "Ravi";
+        a1.RemoveAt(0);
 
         foreach (var item in a1)
         {
@@ -187,6 +191,9 @@ class _9DatastrLearn
         l1.Add(4);
 
         l1[0] = 5;
+
+        l1.RemoveAt(0); // Index
+        l1.Remove(4);   // data
         foreach (var item in l1)
         {
             Console.WriteLine(item);
@@ -201,10 +208,136 @@ class _9DatastrLearn
         l2.Add(4);
 
         List<int> l3 = new List<int>();
-        l3[0] = 1;
-        l3[1] = 2;
-        l3[2] = 3;
+        //l3[0] = 1;  // Error
+        //l3[1] = 2;
+        //l3[2] = 3;
 
-       
+
+    }
+
+
+    private void EQCLearn()
+    {
+
+        List<string> l1 = new List<string>();
+        l1.Add("test1");
+        l1.Add("test2");
+        l1.Add("test3");
+
+
+        string[] s1 = { "test1", "test2", "test2" };
+        IEnumerable<string> l2 = new List<string>() { "test1", "test2", "test3" };
+        IEnumerable<string> l3 = l1;
+        //l3.Add("test4"); // Error
+
+        //Console.WriteLine(l3[0]); // Error
+
+        foreach (var item in l3)
+        {
+            Console.WriteLine(item);
+        }
+
+        IQueryable<string> q1 = l1.AsQueryable();
+        //q1.Add();
+        foreach (var item in q1)
+        {
+            Console.WriteLine(item);
+        }
+
+        ICollection c1 = q1.ToList();
+        //c1.Add() // Error
+
+        foreach (var item in c1)
+        {
+            Console.WriteLine(item);
+        }
+
+    }
+
+
+    private void HashSetLearn()
+    {
+        HashSet<string> s1 = new HashSet<string>();
+        s1.Add("test1");
+        s1.Add("test1");
+        s1.Add("test1");
+        s1.Add("test2");
+
+        //Console.WriteLine(s1[0]);
+
+        foreach (var item in s1)
+        {
+            Console.WriteLine(item);
+        }
+    }
+
+    private void HashTableDictLearn()
+    {
+        Hashtable h1 = new Hashtable();
+        h1.Add(1, "test1");
+        h1.Add(200, 40);
+        h1.Add("test2", 'a');
+
+        Console.WriteLine(h1[1]);
+        Console.WriteLine(h1["test2"]);
+        foreach (var item in h1.Keys)
+        {
+            Console.WriteLine(h1[item]);
+        }
+
+
+        Dictionary<int, string> d1 = new Dictionary<int, string>();
+        d1.Add(1, "test1");
+        d1.Add(200, "test2");
+        //d1.Add("test2", "test1"); // Error
+
+        if (d1.ContainsKey(200))
+        {
+            Console.WriteLine(d1[200]);
+        }
+
+        foreach (var item in d1)
+        {
+            Console.WriteLine(item.Key);
+            Console.WriteLine(item.Value);
+        }
+
+    }
+
+
+    private int SQLearn()
+    {
+
+        // Generic
+        Stack<string> s1 = new Stack<string>();
+        s1.Push("test1");
+        s1.Push("test2");
+        s1.Push("test3");
+        s1.Push("test4");
+
+        s1.Pop();
+
+        foreach (var item in s1)
+        {
+            Console.WriteLine(item);
+        }
+
+        // non generic
+        Stack s2 = new Stack();
+
+         
+        Queue<string> s3 = new Queue<string>();
+        s3.Enqueue("test1");
+        s3.Enqueue("test2");
+        s3.Enqueue("test3");
+        s3.Enqueue("test4");
+
+
+        s3.Dequeue();
+
+        foreach (var item in s3)
+        {
+            Console.WriteLine(item);
+        }
     }
 }
