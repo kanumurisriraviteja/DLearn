@@ -18,14 +18,15 @@ public class Program
 
     private void Practise()
     {
-        _1ProLearn  p1 = new _1ProLearn();
+        _1ProLearn p1 = new _1ProLearn();
         p1.Learn();
     }
 
     private void Learn()
     {
         // DOM();
-        Logic();
+        // Logic();
+        Inheritence();
     }
 
     private void DOM()
@@ -93,12 +94,41 @@ public class Program
         // l1.Learn();
         // _8StrLearn s = new _8StrLearn();
         // s.Learn();
-        _9DatastrLearn ds = new _9DatastrLearn();
-        ds.Learn();
-
-
+        // _9DatastrLearn ds = new _9DatastrLearn();
+        // ds.Learn();
     }
 
 
+    private void Inheritence()
+    {
 
+        _12oopsbase o2 = new _12oopsbase();
+        o2.m1();// can be accessed  This is m1 method in _12oopsbase class:10
+                // o2.m2(); // Error cant be accessed;
+                // o2.a2; // Errror
+        o2.m3();//This is m3 method in _12oopsbase class
+        o2.m4();//This is m4 method in _12oopsbase class
+        o2.m5();//This is m5 method in _12oopsbase class
+
+        TestOne o1 = new TestOne();
+        o1.m1();//This is m1 method in _12oopsbase class:10
+        o1.m2();//This is m2 method in Testone class:10
+        o1.m3();//This is m3 method in _12oopsbase class
+        o1.m4();//This is m4 method in Testone class
+        o1.m5();//This is m5 method in Testone class
+
+        _12oopsbase o4 = new TestOne();
+        o4.m1();//This is m1 method in _12oopsbase class:10
+        //o4.m2(); Error can't be accessed
+        o4.m3(); //This is m3 method in _12oopsbase class
+        o4.m4();//This is m4 method in Testone class
+        o4.m5();//This is m5 method in _12oopsbase class
+
+
+        TestThree o3 = new TestThree();
+        Console.WriteLine(o3.a0);
+        Console.WriteLine(o3.a2);
+        o3.m1();
+        o3.m2();
+    }
 }

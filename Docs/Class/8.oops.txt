@@ -1,0 +1,6 @@
+Instatiation cant be done for abstract class and interface
+
+Inheritence : 
+
+single level Inheritence, multi level Inheritence,multiple Inheritence
+In c# we dont have multiple Inheritence via classes, multiple Inheritence is possible via interfaces

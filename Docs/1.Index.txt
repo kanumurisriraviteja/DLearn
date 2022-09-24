@@ -20,4 +20,4 @@
           queue
           dictionary
           linked list
-12. oops principles
+12. oops principles  > Inheritence, Polymorphism (Compile,Runtime), Abstraction, Encapsulation.

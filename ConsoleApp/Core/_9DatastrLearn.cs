@@ -13,7 +13,7 @@ class _9DatastrLearn
         //EQCLearn();
         //HashSetLearn();
         //HashTableDictLearn();
-        SQLearn();
+        // SQLearn();
     }
 
     private void ArrayLearn()
@@ -159,9 +159,11 @@ class _9DatastrLearn
     {
 
         ArrayList a1 = new ArrayList();
+        a1[0] = "kanumuri";
         a1.Add(1);
         a1.Add("Teja");
         a1.Add(5.2f);
+        a1.Add(new Employee() { Name = "Teja", EmployyeId = 5, Salary = 4 });
 
 
         a1[1] = "Ravi";
@@ -213,8 +215,23 @@ class _9DatastrLearn
         //l3[2] = 3;
 
 
-    }
 
+        List<Employee> l4 = new List<Employee>()
+        {
+            new Employee(){Name = "Teja", EmployyeId = 5, Salary = 4  }
+        };
+
+        l4.Add(new Employee() { Name = "Teja6", EmployyeId = 6, Salary = 4 });
+        l4.Add(new Employee() { Name = "Teja7", EmployyeId = 7, Salary = 4 });
+        l4.Add(new Employee() { Name = "Teja8", EmployyeId = 8, Salary = 4 });
+
+        Employee e1 = new Employee();
+        e1.EmployyeId = 9;
+        e1.Name = "teja9";
+        e1.Salary = 6;
+        l4.Add(e1);
+
+    }
 
     private void EQCLearn()
     {
@@ -253,7 +270,6 @@ class _9DatastrLearn
         }
 
     }
-
 
     private void HashSetLearn()
     {
@@ -303,9 +319,7 @@ class _9DatastrLearn
         }
 
     }
-
-
-    private int SQLearn()
+    private void SQLearn()
     {
 
         // Generic
@@ -325,7 +339,7 @@ class _9DatastrLearn
         // non generic
         Stack s2 = new Stack();
 
-         
+
         Queue<string> s3 = new Queue<string>();
         s3.Enqueue("test1");
         s3.Enqueue("test2");
