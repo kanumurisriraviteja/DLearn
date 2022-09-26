@@ -5,6 +5,11 @@ public class _12oopsbase
     public int a0 = 10;
     private int a1 = 20;
 
+    public _12oopsbase()
+    {
+        Console.WriteLine("This is constructor in _12oopsbase class:");
+    }
+
     public void m1()
     {
         Console.WriteLine("This is m1 method in _12oopsbase class:" + a0);
@@ -17,15 +22,15 @@ public class _12oopsbase
 
     public virtual void m4()
     {
-         Console.WriteLine("This is m4 method in _12oopsbase class");
+        Console.WriteLine("This is m4 method in _12oopsbase class");
     }
 
-    public void m5() 
+    public void m5()
     {
         Console.WriteLine("This is m5 method in _12oopsbase class");
     }
 
-    public void m6() 
+    public void m6()
     {
         Console.WriteLine("This is m6 method in _12oopsbase class");
     }
@@ -34,6 +39,11 @@ public class _12oopsbase
 
 public class TestOne : _12oopsbase
 {
+    public TestOne()
+    {
+        Console.WriteLine("This is constructor in TestOne class:");
+    }
+
 
     public int a2 = 30;
     public void m2()
@@ -55,12 +65,12 @@ public class TestOne : _12oopsbase
         Console.WriteLine("This is m4 method in Testone class");
     }
 
-    public new void m5() 
+    public new void m5()
     {
         Console.WriteLine("This is m5 method in Testone class");
     }
 
-    public void m6() 
+    public void m6()
     {
         Console.WriteLine("This is m6 method in Testone class");
     }
@@ -105,6 +115,11 @@ public class TestFour : TestTwo, _10IntLearn, _10IntLearnTwo
     }
 
     public void EMICard()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void SavingAccount()
     {
         throw new NotImplementedException();
     }

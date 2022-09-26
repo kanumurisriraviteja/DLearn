@@ -166,5 +166,12 @@ namespace ConsoleApp.Core
         {
             return a / b;
         }
+
+
+        private void power(int a, int b)
+        {
+
+        }
+
     }
 }

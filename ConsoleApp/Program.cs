@@ -3,14 +3,14 @@ using ConsoleApp.Test;
 using ConsoleApp.PracProg;
 
 namespace ConsoleApp;
-public class Program
+public class Program : Object
 {
     static void Main(string[] args)
     {
         Console.WriteLine("==Hello World==");
         Program p = new Program();
         p.Learn();
-        //p.Practise();
+        //p.Practise();   
 
         Console.WriteLine("==Bye==");
         Console.ReadLine();
@@ -106,8 +106,8 @@ public class Program
 
         _12oopsbase o2 = new _12oopsbase();
         o2.m1();// can be accessed  This is m1 method in _12oopsbase class:10
-                // o2.m2(); // Error cant be accessed;
-                // o2.a2; // Errror
+        //o2.m2(); // Error cant be accessed;
+        //o2.a2; // Errror
         o2.m3();//This is m3 method in _12oopsbase class
         o2.m4();//This is m4 method in _12oopsbase class
         o2.m5();//This is m5 method in _12oopsbase class
@@ -130,8 +130,8 @@ public class Program
         o4.m6(); //This is m6 method in _12oopsbase class
 
 
-        //TestOne o5 = new _12oopsbase(); // Error - compiletime
-        //TestOne o5 = (TestOne)new _12oopsbase();// Error - runtime
+        // TestOne o5 = new _12oopsbase(); // Error - compiletime
+        // TestOne o6 = (TestOne)new _12oopsbase();// Error - runtime
 
         TestThree o3 = new TestThree();
         Console.WriteLine(o3.a0);

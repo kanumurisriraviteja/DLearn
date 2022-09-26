@@ -20,6 +20,7 @@ namespace ConsoleApp.Core
         public abstract void AddBalance();
         public abstract void WithBalance();
         public abstract void DebitCard();
+        public abstract void SavingAccount();
     }
 
 
@@ -40,9 +41,53 @@ namespace ConsoleApp.Core
             throw new NotImplementedException();
         }
 
+        public override bool Equals(object? obj)
+        {
+            return base.Equals(obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
+        public override void SavingAccount()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string? ToString()
+        {
+            return base.ToString();
+        }
+
         public override void WithBalance()
         {
             throw new NotImplementedException();
         }
     }
+
+    class IdfcFirstBank : _10IntLearn
+    {
+        public void AddBalance()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DebitCard()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SavingAccount()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void WithBalance()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
 }

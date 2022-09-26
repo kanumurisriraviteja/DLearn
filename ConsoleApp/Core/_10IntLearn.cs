@@ -10,6 +10,8 @@ interface _10IntLearn
     void WithBalance();
 
     void DebitCard();
+
+    void SavingAccount();
 }
 
 interface _10IntLearnTwo
