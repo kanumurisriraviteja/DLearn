@@ -2,6 +2,8 @@ namespace ConsoleApp.Core;
 
 class _2DataType
 {
+    int ic;
+ 
 
     public void Learn()
     {
@@ -10,6 +12,7 @@ class _2DataType
 
         int i, j = 10, k = 100;  // Assign in the same line
         // Console.WriteLine(i); // Error i can't be assigned as it is not assigned
+        Console.WriteLine($"class level initialized default int variable {ic}");  // class level variables would be initialized by the constructor
 
         // Implicit Type casting >> lower datatype to higher data type
         byte a0 = 250;

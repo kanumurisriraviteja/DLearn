@@ -12,6 +12,16 @@ non static/ instance
 5. for the satatic variable you will have only one copy of memory.
 6. for the non static variables you will have individual copies of memory.
 ===============================================================================================
+variables : 
+1. static       > only one copy of memory
+2. non static   > multiple copy of memory, one for each object
+3. const        > only one copy of memory, same as that of the static variable, must be initialized when ever it is defined, cannot be modified
+4. readonly     > multiple copy of memory, one for each object, same as that of the non static variable,
+                  after the initialized  cant be modified, but need not be initialized when it is defined, mostly assigned in the constructor
+
+static variable can be modified, but const can't be modified
+non static variables can be modified, but readonly cant be modified
+===============================================================================================
 constructor:
 
 **this is first statement of execution

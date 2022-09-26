@@ -6,20 +6,26 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp.Core
 {
-    public abstract class _11AbsLearn
+    abstract class _11AbsLearn : _10IntLearn
     {
+        int i = 5;
         public void IntrestRate()
         {
-            int i = 5;
+            i = 5;
+            Console.Write(_10IntLearn.iVar);
         }
 
+        private void Test() { }
         public abstract void CreditCard();
+        public abstract void AddBalance();
+        public abstract void WithBalance();
+        public abstract void DebitCard();
     }
 
 
-    public class FederalBank : _11AbsLearn, _10IntLearn
+    class FederalBank : _11AbsLearn
     {
-        public void AddBalance()
+        public override void AddBalance()
         {
             throw new NotImplementedException();
         }
@@ -29,12 +35,12 @@ namespace ConsoleApp.Core
             throw new NotImplementedException();
         }
 
-        public void DebitCard()
+        public override void DebitCard()
         {
             throw new NotImplementedException();
         }
 
-        public void WithBalance()
+        public override void WithBalance()
         {
             throw new NotImplementedException();
         }

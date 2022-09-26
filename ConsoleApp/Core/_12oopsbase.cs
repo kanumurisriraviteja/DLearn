@@ -25,6 +25,11 @@ public class _12oopsbase
         Console.WriteLine("This is m5 method in _12oopsbase class");
     }
 
+    public void m6() 
+    {
+        Console.WriteLine("This is m6 method in _12oopsbase class");
+    }
+
 }
 
 public class TestOne : _12oopsbase
@@ -53,6 +58,11 @@ public class TestOne : _12oopsbase
     public new void m5() 
     {
         Console.WriteLine("This is m5 method in Testone class");
+    }
+
+    public void m6() 
+    {
+        Console.WriteLine("This is m6 method in Testone class");
     }
 }
 

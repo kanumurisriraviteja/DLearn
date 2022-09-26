@@ -4,3 +4,11 @@ Inheritence :
 
 single level Inheritence, multi level Inheritence,multiple Inheritence
 In c# we dont have multiple Inheritence via classes, multiple Inheritence is possible via interfaces
+The parent class constructor should not  be private or the class should not be sealed then only the Inheritence is possible.
+parent cant access child properties/methods, only child can access parent
+the parent of all the class is object
+method overriding and method overloading, if we create a parent class reference via the child class then only the overridden methods are recognised
+The scope of the parent should be more than that of the child or equal
+The default scope for the memebers of an interface is public, in interface everything is abstract
+interface can only have static variables, but not non static variables
+interface can inherit from other interface

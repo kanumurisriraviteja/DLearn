@@ -33,5 +33,13 @@ public class UsrOne
         u1.Learn4(); //No Restriction
 
 
+        _4Nsl u2 = u1; // changes in u2 changes both in u1 and u2
+        u2.a1 += 10;
+        Console.WriteLine(u1.a1); //13
+        Console.WriteLine(u2.a1); //13
+
+        // create a clone  -- TODO
+        _4Nsl u3 = u1;
+
     }
 }

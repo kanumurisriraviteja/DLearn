@@ -4,7 +4,10 @@ class, variable, method
 2. public        >   scope would be the through out the program   >> no restriction
 3. protected     >   scope would be only for same class, inherited members within the same assembly
 4. internal      >   scope would be in the same assembly
-5. protected internal  > protected + internal , The scope would be in the same assembly or for the inherited members
+5. protected internal  > protected / internal , The scope would be for the inherited members or in the same assembly
 
-assembly : for  all the sam namespaces it would be in the same assembly
-//    private 
+assembly : for  all the same namespaces it would be in the same assembly
+The default scope for every member of the class is private
+class can be either public,internal. we cannot have a private class,protected  class
+The default scope for the class is internal
+The default scope for the memebers of an interface is public, in interface everything is abstract

@@ -52,6 +52,7 @@ public class Program
 
 
         Console.WriteLine(_4Nsl.a0);  // should be access via the class name;
+        Console.WriteLine(_4Nsl.a6);  // should be access via the class name;
         _4Nsl.Learn();   // static method , non static class
                          // Non static class - end
 
@@ -62,6 +63,7 @@ public class Program
         // Console.WriteLine(Nsl.a1);  // Error should be accessed via the object
         Console.WriteLine(d2.a1);
         Console.WriteLine(d2.a1);
+        Console.WriteLine(_4Nsl.a6);
         // Nsl.Learn1();   // Error 
         d2.Learn1();     // instance method
         d2.Learn1();     // instance method
@@ -88,14 +90,14 @@ public class Program
     }
     private void Logic()
     {
-        // _6DecL decL = new _6DecL();
-        // decL.Learn();
-        // _7Lpl l1 = new _7Lpl();
-        // l1.Learn();
-        // _8StrLearn s = new _8StrLearn();
-        // s.Learn();
-        // _9DatastrLearn ds = new _9DatastrLearn();
-        // ds.Learn();
+        _6DecL decL = new _6DecL();
+        decL.Learn();
+        _7Lpl l1 = new _7Lpl();
+        l1.Learn();
+        _8StrLearn s = new _8StrLearn();
+        s.Learn();
+        _9DatastrLearn ds = new _9DatastrLearn();
+        ds.Learn();
     }
 
 
@@ -109,6 +111,7 @@ public class Program
         o2.m3();//This is m3 method in _12oopsbase class
         o2.m4();//This is m4 method in _12oopsbase class
         o2.m5();//This is m5 method in _12oopsbase class
+        o2.m6();//This is m6 method in _12oopsbase class
 
         TestOne o1 = new TestOne();
         o1.m1();//This is m1 method in _12oopsbase class:10
@@ -116,19 +119,29 @@ public class Program
         o1.m3();//This is m3 method in _12oopsbase class
         o1.m4();//This is m4 method in Testone class
         o1.m5();//This is m5 method in Testone class
+        o1.m6();//This is m6 method in Testone class
 
         _12oopsbase o4 = new TestOne();
         o4.m1();//This is m1 method in _12oopsbase class:10
         //o4.m2(); Error can't be accessed
         o4.m3(); //This is m3 method in _12oopsbase class
-        o4.m4();//This is m4 method in Testone class
+        o4.m4();//This is m4 method in Testone class       // method overriding 
         o4.m5();//This is m5 method in _12oopsbase class
+        o4.m6(); //This is m6 method in _12oopsbase class
 
+
+        //TestOne o5 = new _12oopsbase(); // Error - compiletime
+        //TestOne o5 = (TestOne)new _12oopsbase();// Error - runtime
 
         TestThree o3 = new TestThree();
         Console.WriteLine(o3.a0);
         Console.WriteLine(o3.a2);
         o3.m1();
         o3.m2();
+
+
+        FederalBank f = new FederalBank();
+        Console.WriteLine(_10IntLearn.iVar);
+        f.IntrestRate();
     }
 }

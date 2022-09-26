@@ -37,7 +37,23 @@ public class UsrTwo : _4Nsl
         u2.Learn4(); //No Restriction
 
     }
+}
+
+// // Error private class is not possible
+// private class UserThree 
+// {
+
+// }
+
+// // Error protected class is not possible
+// protected class UserFour
+// {
 
 
+// }
+
+// This is known as internal class
+class UserFive
+{
 
 }

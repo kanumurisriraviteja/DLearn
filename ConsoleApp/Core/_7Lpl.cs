@@ -18,6 +18,7 @@ namespace ConsoleApp.Core
         }
         public void floop()
         {
+            Console.WriteLine("Enter nof of times the loop should run");
             string a0 = Console.ReadLine();
 
             /* 
@@ -73,6 +74,7 @@ namespace ConsoleApp.Core
              S
              T
             */
+            Console.WriteLine("Enter the string");
             string a0 = Console.ReadLine();
 
             char[] a1 = a0.ToCharArray();
@@ -86,6 +88,7 @@ namespace ConsoleApp.Core
 
         public void wloop()
         {
+            Console.WriteLine("Enter int");
             string a0 = Console.ReadLine();
             int a1 = Convert.ToInt32(a0);
             int i = 0;
@@ -105,6 +108,7 @@ namespace ConsoleApp.Core
         }
         private void dwloop()
         {
+            Console.WriteLine("Enter int");
             string a0 = Console.ReadLine();
             int a1 = Convert.ToInt32(a0);
             int i = 0;
