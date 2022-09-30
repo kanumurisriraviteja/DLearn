@@ -33,4 +33,31 @@ static class _3Sl
     // {
 
     // }
+
+
+
+    public static int CountVowels(this string t, string value) 
+    {
+        string myStr;
+        int i, len, vowel_count, cons_count;
+        myStr = value;
+        vowel_count = 0;
+        cons_count = 0;
+        // find length
+        len = myStr.Length;
+        for (i = 0; i < len; i++)
+        {
+            if (myStr[i] == 'a' || myStr[i] == 'e' || myStr[i] == 'i' || myStr[i] == 'o' || myStr[i] == 'u' || myStr[i] == 'A' || myStr[i] == 'E' || myStr[i] == 'I' || myStr[i] == 'O' || myStr[i] == 'U')
+            {
+                vowel_count++;
+            }
+            else
+            {
+                cons_count++;
+            }
+        }
+
+        return vowel_count;
+    }
+     
 }

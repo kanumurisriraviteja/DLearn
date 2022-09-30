@@ -7,7 +7,7 @@ class _9DatastrLearn
 {
     public void Learn()
     {
-        //ArrayLearn();
+        ArrayLearn();
         //ArrayListLearn();
         //ListLearn();
         //EQCLearn();
@@ -18,9 +18,10 @@ class _9DatastrLearn
 
     private void ArrayLearn()
     {
-        oneDArray();
+        //oneDArray();
         // twoDArrary();
         // JaggedArrary();
+        ArrayImp();
     }
     private void oneDArray()
     {
@@ -354,4 +355,29 @@ class _9DatastrLearn
             Console.WriteLine(item);
         }
     }
+
+
+    private void ArrayImp() 
+    {
+
+        int[] arr1 = new int[6] { 5, 8, 9, 25, 0, 7 };
+        int[] arr2 = (int[])arr1.Clone();
+        Array.Sort(arr1);
+
+        Array.Sort<int>(arr1, new Comparison<int>(
+                 (i1, i2) => i2.CompareTo(i1)));
+
+        foreach (var item in arr1)
+        {
+            Console.WriteLine(item);
+        }
+
+        Array.Clear(arr1); // empty an array
+
+         Array.Reverse(arr2);
+
+
+        Employee[] employees = new Employee[6];
+    }
+
 }

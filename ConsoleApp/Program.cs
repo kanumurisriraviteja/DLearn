@@ -25,9 +25,9 @@ public class Program : Object
     private void Learn()
     {
         // DOM();
-        // Logic();
+        Logic();
         //oopsPrinciples();
-        others();
+        //others();
     }
 
     private void DOM()
@@ -91,12 +91,12 @@ public class Program : Object
     }
     private void Logic()
     {
-        _6DecL decL = new _6DecL();
-        decL.Learn();
-        _7Lpl l1 = new _7Lpl();
-        l1.Learn();
-        _8StrLearn s = new _8StrLearn();
-        s.Learn();
+        //    _6DecL decL = new _6DecL();
+        //    decL.Learn();
+        //    _7Lpl l1 = new _7Lpl();
+        //    l1.Learn();
+        //    _8StrLearn s = new _8StrLearn();
+        //    s.Learn();
         _9DatastrLearn ds = new _9DatastrLearn();
         ds.Learn();
     }
@@ -104,7 +104,7 @@ public class Program : Object
     {
         //  _10IntLearn  o0 = new _10IntLearn(); // Error
         _10IntLearn o8 = new FederalBank(); // valid
-         _10IntLearn o9;
+        _10IntLearn o9;
         FederalBank o10 = new FederalBank();
         o9 = o10;
         FederalBank f = new FederalBank();
@@ -147,25 +147,28 @@ public class Program : Object
         Console.WriteLine(o3.a0);
         Console.WriteLine(o3.a2);
         o3.m1();
-        o3.m2();  
+        o3.m2();
 
     }
 
 
     private void others()
     {
+        string a = "teja";
+        Console.WriteLine(a.CountVowels(a));
+
 
         // Calling constructor
         Console.WriteLine("Calling constructor");
-        TestOne  o11 = new TestOne(); 
+        TestOne o11 = new TestOne();
         TestOne o12 = new TestOne("Hi we are learning parameterised const");
 
 
         // Accessing from enum
         System.Console.WriteLine(_14en.Jan);
-         
+
         _15Ex a1 = new _15Ex();
         a1.Learn();
-    }    
+    }
 
 }

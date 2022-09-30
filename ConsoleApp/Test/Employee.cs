@@ -12,9 +12,9 @@ public class Employee
         {
             if (value < 0)
             {
-                Id = 0;
+                this.Id = 0;
             }
-            else { Id = value; }
+            else { this.Id = value; }
 
         }
     }
