@@ -124,3 +124,16 @@ public class TestFour : TestTwo, _10IntLearn, _10IntLearnTwo
         throw new NotImplementedException();
     }
 }
+
+
+
+public sealed class TestFive
+{
+
+}
+
+// cannot be inherited as the class is sealed
+// public class TestSix : TestFive
+// {
+
+// }

@@ -10,7 +10,7 @@ public class Program : Object
         Console.WriteLine("==Hello World==");
         Program p = new Program();
         p.Learn();
-        //p.Practise();   
+        //p.Practise();
 
         Console.WriteLine("==Bye==");
         Console.ReadLine();
@@ -26,7 +26,8 @@ public class Program : Object
     {
         // DOM();
         // Logic();
-        Inheritence();
+        //oopsPrinciples();
+        others();
     }
 
     private void DOM()
@@ -99,10 +100,19 @@ public class Program : Object
         _9DatastrLearn ds = new _9DatastrLearn();
         ds.Learn();
     }
-
-
-    private void Inheritence()
+    private void oopsPrinciples()
     {
+        //  _10IntLearn  o0 = new _10IntLearn(); // Error
+        _10IntLearn o8 = new FederalBank(); // valid
+         _10IntLearn o9;
+        FederalBank o10 = new FederalBank();
+        o9 = o10;
+        FederalBank f = new FederalBank();
+        Console.WriteLine(_10IntLearn.iVar);
+        f.IntrestRate();
+
+        //  _11AbsLearn o1 = new _11AbsLearn();// Error
+        _11AbsLearn o7 = new FederalBank();  //valid
 
         _12oopsbase o2 = new _12oopsbase();
         o2.m1();// can be accessed  This is m1 method in _12oopsbase class:10
@@ -139,9 +149,16 @@ public class Program : Object
         o3.m1();
         o3.m2();
 
-
-        FederalBank f = new FederalBank();
-        Console.WriteLine(_10IntLearn.iVar);
-        f.IntrestRate();
     }
+
+
+    private void others()
+    {
+        // Accessing from enum
+        System.Console.WriteLine(_14en.Jan);
+         
+        _15Ex a1 = new _15Ex();
+        a1.Learn();
+    }    
+
 }

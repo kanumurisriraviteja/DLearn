@@ -4,8 +4,8 @@ Abstract class : may contain method defination as well as implementation, who ev
                  they should implement the abstract methods
 
 
-Inheritence : 
-
+OOPS principles
+========================================================================================
 single level Inheritence, multi level Inheritence,multiple Inheritence
 In c# we dont have multiple Inheritence via classes, multiple Inheritence is possible via interfaces
 The parent class constructor should not  be private or the class should not be sealed then only the Inheritence is possible.
