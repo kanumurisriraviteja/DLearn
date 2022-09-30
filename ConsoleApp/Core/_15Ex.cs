@@ -1,3 +1,4 @@
+using ConsoleApp.Test;
 using System.Text.RegularExpressions;
 
 namespace ConsoleApp.Core;
@@ -9,19 +10,19 @@ public class _15Ex
     {
         try
         {
-            Student newStudent = null;
-            newStudent = new Student();
-            newStudent.StudentName = "James";
-            ValidateStudent(newStudent);
+            Employee e = new Employee();
+            e.Name = "teja123";
+            ValidateName(e);
             Test();
             Console.WriteLine("This is logic");
             int[] a = new int[2];
             Console.WriteLine(a[5]);
 
         }
-        catch (InvalidStudentNameException ex)
+        catch (NameException ex)
         {
-            Console.WriteLine(ex.Message);
+            Console.WriteLine("Name is not present" + ex);
+            //throw ex;
         }
         catch (NullReferenceException e)
         {
@@ -65,33 +66,21 @@ public class _15Ex
         Console.WriteLine("This is test1");
     }
 
-
-    class Student
+    private static void ValidateName(Employee std)
     {
-        public int StudentID { get; set; }
-        public string StudentName { get; set; }
-       
+        string name = "kanumuri sri ravi teja";
+        if (!name.Contains(std.Name))
+            throw new NameException(std.Name);
+
     }
 
     [Serializable]
-    class InvalidStudentNameException : Exception
+    class NameException : Exception
     {
-        public InvalidStudentNameException() { }
-
-        public InvalidStudentNameException(string name)
-            : base(String.Format("Invalid Student Name: {0}", name))
+        public NameException(string msg) : base(msg)
         {
 
         }
-    }
-
-    private static void ValidateStudent(Student std)
-    {
-        Regex regex = new Regex("^[a-zA-Z]+$");
-
-        if (!regex.IsMatch(std.StudentName))
-            throw new InvalidStudentNameException(std.StudentName);
-
     }
 
 }

@@ -147,13 +147,20 @@ public class Program : Object
         Console.WriteLine(o3.a0);
         Console.WriteLine(o3.a2);
         o3.m1();
-        o3.m2();
+        o3.m2();  
 
     }
 
 
     private void others()
     {
+
+        // Calling constructor
+        Console.WriteLine("Calling constructor");
+        TestOne  o11 = new TestOne(); 
+        TestOne o12 = new TestOne("Hi we are learning parameterised const");
+
+
         // Accessing from enum
         System.Console.WriteLine(_14en.Jan);
          

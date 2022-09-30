@@ -10,6 +10,11 @@ public class _12oopsbase
         Console.WriteLine("This is constructor in _12oopsbase class:");
     }
 
+    public _12oopsbase(string message)
+    {
+         Console.WriteLine(message);
+
+    }
     public void m1()
     {
         Console.WriteLine("This is m1 method in _12oopsbase class:" + a0);
@@ -44,7 +49,10 @@ public class TestOne : _12oopsbase
         Console.WriteLine("This is constructor in TestOne class:");
     }
 
-
+    public TestOne(string message) : base(message)
+    {
+        
+    }
     public int a2 = 30;
     public void m2()
     {
