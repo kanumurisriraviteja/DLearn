@@ -1,5 +1,6 @@
 using ConsoleApp.Test;
 using System.Collections;
+using System.Linq;
 
 namespace ConsoleApp.Core;
 
@@ -7,7 +8,7 @@ class _9DatastrLearn
 {
     public void Learn()
     {
-        ArrayLearn();
+        // ArrayLearn();
         //ArrayListLearn();
         //ListLearn();
         //EQCLearn();
@@ -199,12 +200,12 @@ class _9DatastrLearn
         l1.Remove(4);   // data
         foreach (var item in l1)
         {
-            Console.WriteLine(item);
+           Console.WriteLine(item);
         }
 
         for (int i = 0; i < l1.Count; i++)
         {
-            Console.WriteLine(l1[i]);
+           Console.WriteLine(l1[i]);
         }
 
         List<int> l2 = new List<int>() { 1, 2, 3 };
@@ -214,7 +215,7 @@ class _9DatastrLearn
         //l3[0] = 1;  // Error
         //l3[1] = 2;
         //l3[2] = 3;
-
+        l2.Contains(1);
 
 
         List<Employee> l4 = new List<Employee>()
@@ -232,6 +233,12 @@ class _9DatastrLearn
         e1.Salary = 6;
         l4.Add(e1);
 
+        List<Employee> l5 = new List<Employee>();
+        l5.AddRange(l4);
+        bool a = l5.Contains(new Employee() { EmployyeId = 5 });
+        Employee l6 = l5.Find(x => x.EmployyeId == 5);
+        l5.FindAll(x => x.Salary > 4);
+        l5.Remove(new Employee() { EmployyeId = 5 });
     }
 
     private void EQCLearn()
@@ -357,7 +364,7 @@ class _9DatastrLearn
     }
 
 
-    private void ArrayImp() 
+    private void ArrayImp()
     {
 
         int[] arr1 = new int[6] { 5, 8, 9, 25, 0, 7 };
@@ -374,7 +381,7 @@ class _9DatastrLearn
 
         Array.Clear(arr1); // empty an array
 
-         Array.Reverse(arr2);
+        Array.Reverse(arr2);
 
 
         Employee[] employees = new Employee[6];

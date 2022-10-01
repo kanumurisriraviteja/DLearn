@@ -25,9 +25,10 @@ public class Program : Object
     private void Learn()
     {
         // DOM();
-        Logic();
+        //Logic();
         //oopsPrinciples();
         //others();
+        MultiEval();
     }
 
     private void DOM()
@@ -169,6 +170,12 @@ public class Program : Object
 
         _15Ex a1 = new _15Ex();
         a1.Learn();
+    }
+
+    private void MultiEval() 
+    {
+        _16Mult _16Mult = new _16Mult();
+        _16Mult.Learn();
     }
 
 }

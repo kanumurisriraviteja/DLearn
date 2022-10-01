@@ -23,3 +23,7 @@
 12. oops principles  > Inheritence, Polymorphism (Compile(method overloading),Runtime(method overriding,method shadowing/hiding))
                        Abstraction, 
                        Encapsulation.
+13. Exception Handling
+14. this operator,partial class,Extension methods,delegates,Indexes
+15. Multithreading,concurrency,parallemism
+16. File Handling

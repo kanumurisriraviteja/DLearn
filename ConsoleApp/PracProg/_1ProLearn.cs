@@ -4,7 +4,8 @@ class _1ProLearn
 {
     public void Learn()
     {
-        ReverString();
+        //ReverString();
+        Console.WriteLine(Fact(5));
     }
 
 
@@ -37,4 +38,13 @@ class _1ProLearn
         }
         Console.Write(" ");
     }
+
+    private int Fact(int n)
+    {
+        if (n == 1)
+            return 1;
+        else
+            return n * Fact(n - 1);
+    }
+
 }
