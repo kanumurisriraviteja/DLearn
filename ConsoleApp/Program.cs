@@ -27,8 +27,8 @@ public class Program : Object
         // DOM();
         //Logic();
         //oopsPrinciples();
-        //others();
-        MultiEval();
+        others();
+        //MultiEval();
     }
 
     private void DOM()
@@ -155,27 +155,49 @@ public class Program : Object
 
     private void others()
     {
-        string a = "teja";
-        Console.WriteLine(a.CountVowels(a));
+        // string a = "teja";
+        // Console.WriteLine(a.CountVowels(a));
 
 
-        // Calling constructor
-        Console.WriteLine("Calling constructor");
-        TestOne o11 = new TestOne();
-        TestOne o12 = new TestOne("Hi we are learning parameterised const");
+        // // Calling constructor
+        // Console.WriteLine("Calling constructor");
+        // TestOne o11 = new TestOne();
+        // TestOne o12 = new TestOne("Hi we are learning parameterised const");
 
 
-        // Accessing from enum
-        System.Console.WriteLine(_14en.Jan);
+        // // Accessing from enum
+        // System.Console.WriteLine(_14en.Jan);
 
-        _15Ex a1 = new _15Ex();
-        a1.Learn();
+        // _15Ex a1 = new _15Ex();
+        // a1.Learn();
+
+
+        //// Indexers
+        // _17Ind ic = new _17Ind();
+        // ic.valuearr = new string[] { "C", "CPP", "c#" }; // without indexer 
+
+        // foreach (var i in ic.valuearr)
+        // {
+        //     System.Console.WriteLine(i);
+        // }
+        // // with indexer
+        // ic[0] = "C";
+        // ic[1] = "CPP";
+        // ic[2] = "CSHARP";
+
+        // System.Console.WriteLine(ic[0]);
+
+        _18Del del = new _18Del();
+        del.Learn();
     }
 
-    private void MultiEval() 
+    private void MultiEval()
     {
         _16Mult _16Mult = new _16Mult();
-        _16Mult.Learn();
+        // _16Mult.Learn(); // Multi Threading
+
+        _16Mult.Learn4();// concurrent programming
+
     }
 
 }

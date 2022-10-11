@@ -1,0 +1,28 @@
+Database :
+===============================================
+Relational Database : Oracle,MY SQL,SQL server,Postgre, DB2 => SQL
+		Table columns, Rows
+Non Relational Database : Mongo DB,Cosmos DB,Dynamo DB.   => NO SQL 
+		JSON,BSON,Document
+=================================================================	
+Microsoft SQL server : 	 Database (Express,), SQL Management Studio.
+=====================================================================
+USE DBLearn
+
+CREATE TABLE [dbo].[Customer](
+	[Id] [numeric](18, 0) NULL,
+	[Name] varchar(max) NULL,
+	[Address] [nchar](10) NULL,
+	[PhoneNo] [nchar](10) NULL
+) ON [PRIMARY]
+GO
+
+select * from [dbo].[Customer] where Address = 'Hyderabad '
+
+INSERT INTO [dbo].[Customer] VALUES (6 ,'Test6','chennai','123453')
+INSERT INTO [dbo].[Customer] ([Id],[Name],[Address]) VALUES (6,'Test3','Vij');
+INSERT INTO [dbo].[Customer] ([Name],[Id],[Address],[PhoneNo]) VALUES ('Test9',10 ,'chennai','123453')
+
+UPDATE [dbo].[Customer] SET Address = 'Hyderabad',Name='Test10'  WHERE id = 10;
+
+DELETE FROM [Customer]  where Address = 'Hyderabad ';
