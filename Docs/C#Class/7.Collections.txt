@@ -1,8 +1,8 @@
 //Array,ArraryList,List,IEnumerable,IQueryable,ICollection,HashSet,HashTable,Dictionary,Queue,Stack.
 // How to insert, how to access , how to alter,how to delete ....   CRUD - > Create,Read,Update,Delete
 
-Array      	-> same data type(Generic)          , index based, 		Fixed length  -> 1D,multi D,Jaggged
-ArrarList  	-> Different data type(non Generic) , index based, 		Any length
+Array      	-> same data type(Generic)          , index based, 		Fixed length  -> 1D,multi D,Jaggged , cant delete an element
+ArrarList  	-> Different data type(non Generic) , index based, 		Any length, can perform all CRUD
 List       	-> same data type(Generic)          , index based, 		Any length
 
 IEnumerable -> same data type(Generic)          , non index based, 		Any length, Data can't be initialized after its declared
@@ -13,12 +13,15 @@ HashSet     -> same data type(Generic)          , non index based, 		Any length,
 HashTable   -> Different data type(non Generic) , key value based,  Any length
 Dictionary	-> same data type(Generic)          , key value based,  Any length
 Stack       -> Generic,Non Generic              , LIFO/FILO based,       Any length
-Queue       -> Generic,Non Generic              , FIFO based,       Any length
+Queue       -> Generic,Non Generic              , LILO/FIFO based,       Any length
 
 LinkedList  -> single linked list,double linked list,circular linked list
 Tree        -> Binary Tree,AVL Tree
 
 
+
+NON Generic  >  Arrary, ArrarList, HashTable
+Generic      >   List, Dictionary
 
 Imp => Array,List,IEnumerable,Dictionary
 

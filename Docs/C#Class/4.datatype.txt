@@ -1,5 +1,5 @@
 Data Types:
-   1. values    int,double,float              > single place holder
+   1. values    int,double,float,struct              > single place holder
    2. reference  array,list,linkedlist        > multiple data
 ===========================================================================
 true/ false        : bool

@@ -314,10 +314,12 @@ class _9DatastrLearn
         d1.Add(1, "test1");
         d1.Add(200, "test2");
         //d1.Add("test2", "test1"); // Error
+        d1.Remove(1);
 
         if (d1.ContainsKey(200))
         {
             Console.WriteLine(d1[200]);
+            d1[200] = "test3";
         }
 
         foreach (var item in d1)

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YVDB.Console", "YVDB.Console\YVDB.Console.csproj", "{FB593E4C-B72E-4018-BF60-AE7FD18D2379}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB593E4C-B72E-4018-BF60-AE7FD18D2379}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB593E4C-B72E-4018-BF60-AE7FD18D2379}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB593E4C-B72E-4018-BF60-AE7FD18D2379}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB593E4C-B72E-4018-BF60-AE7FD18D2379}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {77794340-910A-4D13-8D74-4215A1B6CD9C}
+	EndGlobalSection
+EndGlobal

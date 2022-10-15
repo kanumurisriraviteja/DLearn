@@ -27,3 +27,10 @@
 14. this operator,partial class,Extension methods,delegates,Indexes
 15. Multithreading,concurrency,parallemism
 16. File Handling
+==============================================================================================================================
+SQL
+1. Installation of SQL Server, CRUD Topics
+2. Constraints
+3. JOINS
+4. GROUP BY,SQL Execution,NULL Handling,Stored Procedures,Functions
+==============================================================================================================================

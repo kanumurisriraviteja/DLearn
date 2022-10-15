@@ -1,4 +1,4 @@
-reference data types
 is as
 shallow copy, deep copy,clone
 IEquatable<Part> , IComparable<Part>
+Lamba,Anonymous,Tuples

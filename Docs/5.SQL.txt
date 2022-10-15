@@ -26,3 +26,25 @@ INSERT INTO [dbo].[Customer] ([Name],[Id],[Address],[PhoneNo]) VALUES ('Test9',1
 UPDATE [dbo].[Customer] SET Address = 'Hyderabad',Name='Test10'  WHERE id = 10;
 
 DELETE FROM [Customer]  where Address = 'Hyderabad ';
+==============================================================================================
+LEFT JOIN 
+RIGHT JOIN 
+INNER JOIN 
+SELF JOIN 
+CARTESIAN PRODUCT
+
+
+SELECT E.ID,E.[Name],E.[SALARY],c.name  FROM [Learn].[dbo].[Employee] E  LEFT JOIN  [Learn].[dbo].[car] C ON E.carId = c.Id
+SELECT  E.ID,E.[Name],E.[SALARY],c.name  FROM [Learn].[dbo].[Employee] E  right  JOIN  [Learn].[dbo].[car] C ON E.carId = c.Id
+SELECT  E.ID,E.[Name],E.[SALARY],c.name  FROM [Learn].[dbo].[Employee] E  inner  JOIN  [Learn].[dbo].[car] C ON E.carId = c.Id
+SELECT  E.ID,E.[Name],E.[SALARY],c.name  FROM [Learn].[dbo].[Employee] E  inner  JOIN  [Learn].[dbo].[Employee] C ON E.carId = c.Id
+SELECT E.ID,E.[Name],E.[SALARY],c.name  FROM [Learn].[dbo].[Employee] E  ,  [Learn].[dbo].[car] C 
+========================================================================================================
+SQL Query Execution: FWGHEDO
+from 
+where 
+group by
+having
+expression 
+distinct 
+order by
