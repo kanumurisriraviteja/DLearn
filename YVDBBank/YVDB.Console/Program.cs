@@ -16,7 +16,7 @@ internal class Program
     }
     private void Logic()
     {
-        string opt;
+        string? opt;
         do
         {
             Console.WriteLine("Hi Welcome to YVDB Bank");
@@ -31,7 +31,6 @@ internal class Program
                 case 5:
                     ShowCustomers();
                     break;
-
                 default:
                     Console.WriteLine("Invalid Option");
                     break;
@@ -51,16 +50,16 @@ internal class Program
             Console.WriteLine("Enter Your Addrees Type 1 for Temporary, 2 for Permanent");
             int type = Convert.ToInt32(System.Console.ReadLine());
             Console.WriteLine("Enter Your H.NO");
-            string hno = Console.ReadLine();
+            string? hno = Console.ReadLine();
             Console.WriteLine("Enter Your state");
-            string state = Console.ReadLine();
+            string? state = Console.ReadLine();
             if (type == 1)
             {
-                c.Address = new List<Address> { new Address() { Hno = hno, Type = AddType.Temporary, State = state } };
+                c.Address = new List<Address> { new Address() { HNo = hno, Type = AddType.Temporary, State = state } };
             }
             else
             {
-                c.Address = new List<Address> { new Address() { Hno = hno, Type = AddType.Permanent, State = state } };
+                c.Address = new List<Address> { new Address() { HNo = hno, Type = AddType.Permanent, State = state } };
             }
 
             Console.WriteLine("Enter Your Aadhar no");
@@ -69,30 +68,24 @@ internal class Program
             Console.WriteLine("Enter Your Age");
             c.Age = Convert.ToInt32(System.Console.ReadLine());
 
-
             Console.WriteLine("Enter Your Account Type 1.Savings, 2.Current ,3.Salary, 4.Senior");
             int savingsType = Convert.ToInt32(System.Console.ReadLine());
-
 
             if (savingsType == 1)
             {
                 c.accountType = AccountType.Savings;
-
             }
             else if (savingsType == 2)
             {
                 c.accountType = AccountType.Current;
-
             }
             else if (savingsType == 3)
             {
                 c.accountType = AccountType.Salary;
-
             }
             else if (savingsType == 4)
             {
                 c.accountType = AccountType.Senior;
-
             }
             else
             {
@@ -102,19 +95,16 @@ internal class Program
         }
         catch (Exception e)
         {
-            Console.WriteLine("Account is not created");
+            Console.WriteLine("Account is not created" + e.Message);
         }
     }
-
     public void ShowCustomers()
     {
         List<Customer> c = r.GiveCustomers();
 
         foreach (var item in c)
         {
-            Console.WriteLine(item.Name + " " + item.Balance);
+            Console.WriteLine($"Customer Id {item.CustomerId}, Name is {item.Name}, His balance is {item.Balance}");
         }
-
     }
-
 }

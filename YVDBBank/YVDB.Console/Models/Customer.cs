@@ -8,10 +8,10 @@ namespace YVDB.Console.Models;
 public class Customer
 {
     public int CustomerId { get; set; }
-    public string Name { get; set; }
+    public string? Name { get; set; }
 
     //public List<string> Address { get; set; }
-    public List<Address> Address { get; set; }
+    public List<Address>? Address { get; set; }
     public double Aadhar { get; set; }
 
     private int _Age;
@@ -61,8 +61,8 @@ public class Customer
 }
 public class Address
 {
-    public string Hno { get; set; }
-    public string State { get; set; }
+    public string? HNo { get; set; }
+    public string? State { get; set; }
     //public string Type { get; set; }
     public AddType Type { get; set; }
 }
