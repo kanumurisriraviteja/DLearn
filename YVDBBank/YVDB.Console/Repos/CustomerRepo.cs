@@ -6,7 +6,7 @@ namespace YVDB.Console.Repos;
 
 public class CustomerRepo : ICustomerRepoRBI
 {
-    private IDictionary<int, double> _intrestRate;
+    private static IDictionary<int, double> _intrestRate;
     private List<Customer> _cust = new List<Customer>();
     public CustomerRepo()
     {
@@ -18,8 +18,9 @@ public class CustomerRepo : ICustomerRepoRBI
             Aadhar = 123,
             Age = 10,
             accountType = AccountType.Savings,
-            phoneNo = 123
-
+            phoneNo = 123,
+            Passsword = "Test1",
+            Balance = 10000
         });
 
         _intrestRate = new Dictionary<int, double>();
@@ -35,21 +36,23 @@ public class CustomerRepo : ICustomerRepoRBI
         _cust.Add(customer);
     }
 
-    public override void AddBalance()
+    public override void AddBalance(int CustomerId, double Balance)
     {
+        Customer customer = _cust.Find(x => x.CustomerId == CustomerId);
+        customer.Balance += Balance;
 
-        throw new NotImplementedException();
     }
 
-    public override void WithDrawBalance()
+    public override void WithDrawBalance(int CustomerId, double Balance)
     {
-        throw new NotImplementedException();
+        Customer customer = _cust.Find(x => x.CustomerId == CustomerId);
+        customer.Balance -= Balance;
     }
-    public override void DebitCard()
+    public override double ShowBalance(int CustomerId)
     {
-        throw new NotImplementedException();
+        Customer customer = _cust.Find(x => x.CustomerId == CustomerId);
+        return customer.Balance;
     }
-
     public List<Customer> GiveCustomers()
     {
         return _cust;

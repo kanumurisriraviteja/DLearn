@@ -32,32 +32,33 @@ public class Customer
         }
     }
 
-    private double _Balance = 10000;
-    public double Balance
-    {
-        get { return _Balance; }
-        set
-        {
-            if (this.accountType == AccountType.Salary)
-            {
-                if (_Balance - value >= 0)
-                {
-                    _Balance -= value;
-                }
-            }
-            else
-            {
-                if (_Balance - value > 10000)
-                {
-                    _Balance -= value;
-                }
-            }
-        }
+    //private double _Balance = 10000;
+    //public double Balance
+    //{
+    //    get { return _Balance; }
+    //    set
+    //    {
+    //        if (this.accountType == AccountType.Salary)
+    //        {
+    //            if (_Balance - value >= 0)
+    //            {
+    //                _Balance += value;
+    //            }
+    //        }
+    //        else
+    //        {
+    //            if (_Balance - value > 10000)
+    //            {
+    //                _Balance += value;
+    //            }
+    //        }
+    //    }
 
-    }
-    //public double Balance { get; set; }
+    //}
+    public double Balance { get; set; }
     public double phoneNo { get; set; }
     public AccountType accountType { get; set; }
+    public string Passsword { get; set; }
 }
 public class Address
 {

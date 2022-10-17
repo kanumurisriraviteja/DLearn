@@ -4,6 +4,9 @@ using YVDB.Console.Repos;
 internal class Program
 {
     private readonly CustomerRepo r;
+    private const string BankEmployeePassword = "Test123";
+    private int custId;
+
     public Program()
     {
         r = new CustomerRepo();
@@ -20,20 +23,73 @@ internal class Program
         do
         {
             Console.WriteLine("Hi Welcome to YVDB Bank");
-            Console.WriteLine("Choose the operation to Perform,1. Add Customer 2.Add Balance 3. Withdraw 4.UPI Transfer 5.show customers");
-            int option = Convert.ToInt32(System.Console.ReadLine());
+            Console.WriteLine("Click 1 for Cusomer, 2. For Employee");
+            int user = Convert.ToInt32(System.Console.ReadLine());
 
-            switch (option)
+            if (user == 1)
             {
-                case 1:
-                    AddCustomer();
-                    break;
-                case 5:
-                    ShowCustomers();
-                    break;
-                default:
-                    Console.WriteLine("Invalid Option");
-                    break;
+                string choose;
+                Console.WriteLine("Enter Customer ID");
+                custId = Convert.ToInt32(System.Console.ReadLine());
+                do
+                {
+                    Console.WriteLine("Choose the operation to Perform 1.Add Balance 2.Withdraw Balance 3.Show Balance");
+                    int option = Convert.ToInt32(System.Console.ReadLine());
+                    switch (option)
+                    {
+                        case 1:
+                            AddCustomerBalance();
+                            break;
+                        case 2:
+                            WithDrawCustomerBalance();
+                            break;
+                        case 3:
+                            ShowCustomerBalance();
+                            break;
+                        default:
+                            Console.WriteLine("Invalid Option");
+                            break;
+                    }
+                    Console.WriteLine(" type y to contine");
+                    choose = Console.ReadLine();
+                } while (choose == "y");
+            }
+            else if (user == 2)
+            {
+                Console.WriteLine("Please Enter Your Password");
+                string GivenPassword = Console.ReadLine();
+                if (BankEmployeePassword == GivenPassword)
+                {
+                    string choose;
+                    do
+                    {
+                        Console.WriteLine("Choose the operation to Perform 1. Add Customer 2.show customers");
+                        int option = Convert.ToInt32(System.Console.ReadLine());
+
+                        switch (option)
+                        {
+                            case 1:
+                                AddCustomer();
+                                break;
+                            case 2:
+                                ShowCustomers();
+                                break;
+                            default:
+                                Console.WriteLine("Invalid Option");
+                                break;
+                        }
+                        Console.WriteLine(" type y to contine");
+                        choose = Console.ReadLine();
+                    } while (choose == "y");
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Password.Please try again");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Invalid Option");
             }
             Console.WriteLine(" type y to contine");
             opt = Console.ReadLine();
@@ -91,6 +147,8 @@ internal class Program
             {
                 throw new Exception();
             }
+            c.Passsword = "Test1";
+            c.Balance = 10000;
             r.AddCustomer(c);
         }
         catch (Exception e)
@@ -106,5 +164,40 @@ internal class Program
         {
             Console.WriteLine($"Customer Id {item.CustomerId}, Name is {item.Name}, His balance is {item.Balance}");
         }
+    }
+
+    private void AddCustomerBalance()
+    {
+        try
+        {
+            Console.WriteLine("Enter Balance to be added");
+            double balance = Convert.ToDouble(System.Console.ReadLine());
+            r.AddBalance(custId, balance);
+
+        }
+        catch (Exception e) { }
+
+    }
+    private void WithDrawCustomerBalance()
+    {
+        try
+        {
+            Console.WriteLine("Enter Balance to be WithDrawn");
+            double balance = Convert.ToDouble(System.Console.ReadLine());
+            r.WithDrawBalance(custId, balance);
+
+        }
+        catch (Exception e) { }
+
+    }
+    private void ShowCustomerBalance()
+    {
+        try
+        {
+            double bal = r.ShowBalance(custId);
+            Console.WriteLine($"Cusomer Balance is: {bal}");
+        }
+        catch (Exception e) { }
+
     }
 }
