@@ -58,7 +58,7 @@ public class Customer
     public double Balance { get; set; }
     public double phoneNo { get; set; }
     public AccountType accountType { get; set; }
-    public string Passsword { get; set; }
+    public string? Password { get; set; }
 }
 public class Address
 {

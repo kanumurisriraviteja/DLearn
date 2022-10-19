@@ -20,72 +20,19 @@ internal class Program
     private void Logic()
     {
         string? opt;
+        Console.WriteLine("Hi Welcome to YVDB Bank");
         do
         {
-            Console.WriteLine("Hi Welcome to YVDB Bank");
-            Console.WriteLine("Click 1 for Cusomer, 2. For Employee");
+            Console.WriteLine("Click 1 for Customer, 2. For Employee");
             int user = Convert.ToInt32(System.Console.ReadLine());
 
             if (user == 1)
             {
-                string choose;
-                Console.WriteLine("Enter Customer ID");
-                custId = Convert.ToInt32(System.Console.ReadLine());
-                do
-                {
-                    Console.WriteLine("Choose the operation to Perform 1.Add Balance 2.Withdraw Balance 3.Show Balance");
-                    int option = Convert.ToInt32(System.Console.ReadLine());
-                    switch (option)
-                    {
-                        case 1:
-                            AddCustomerBalance();
-                            break;
-                        case 2:
-                            WithDrawCustomerBalance();
-                            break;
-                        case 3:
-                            ShowCustomerBalance();
-                            break;
-                        default:
-                            Console.WriteLine("Invalid Option");
-                            break;
-                    }
-                    Console.WriteLine(" type y to contine");
-                    choose = Console.ReadLine();
-                } while (choose == "y");
+                CustomerLogic();
             }
             else if (user == 2)
             {
-                Console.WriteLine("Please Enter Your Password");
-                string GivenPassword = Console.ReadLine();
-                if (BankEmployeePassword == GivenPassword)
-                {
-                    string choose;
-                    do
-                    {
-                        Console.WriteLine("Choose the operation to Perform 1. Add Customer 2.show customers");
-                        int option = Convert.ToInt32(System.Console.ReadLine());
-
-                        switch (option)
-                        {
-                            case 1:
-                                AddCustomer();
-                                break;
-                            case 2:
-                                ShowCustomers();
-                                break;
-                            default:
-                                Console.WriteLine("Invalid Option");
-                                break;
-                        }
-                        Console.WriteLine(" type y to contine");
-                        choose = Console.ReadLine();
-                    } while (choose == "y");
-                }
-                else
-                {
-                    Console.WriteLine("Invalid Password.Please try again");
-                }
+                EmployeeLogic();
             }
             else
             {
@@ -96,6 +43,41 @@ internal class Program
         } while (opt == "y");
     }
 
+
+    #region Employye Region
+    private void EmployeeLogic()
+    {
+        Console.WriteLine("Please Enter Your Password");
+        string GivenPassword = Console.ReadLine();
+        if (BankEmployeePassword == GivenPassword)
+        {
+            string choose;
+            do
+            {
+                Console.WriteLine("Choose the operation to Perform 1. Add Customer 2.show customers");
+                int option = Convert.ToInt32(System.Console.ReadLine());
+
+                switch (option)
+                {
+                    case 1:
+                        AddCustomer();
+                        break;
+                    case 2:
+                        ShowCustomers();
+                        break;
+                    default:
+                        Console.WriteLine("Invalid Option");
+                        break;
+                }
+                Console.WriteLine(" type y to contine");
+                choose = Console.ReadLine();
+            } while (choose == "y");
+        }
+        else
+        {
+            Console.WriteLine("Invalid Password.Please try again");
+        }
+    }
     private void AddCustomer()
     {
         try
@@ -147,7 +129,7 @@ internal class Program
             {
                 throw new Exception();
             }
-            c.Passsword = "Test1";
+            c.Password = "Test1";
             c.Balance = 10000;
             r.AddCustomer(c);
         }
@@ -166,6 +148,48 @@ internal class Program
         }
     }
 
+    #endregion
+
+    #region Customer Region
+    private void CustomerLogic()
+    {
+        string choose;
+        Console.WriteLine("Enter Customer ID");
+        custId = Convert.ToInt32(System.Console.ReadLine());
+        Console.WriteLine("Please Enter Your Password");
+        string givenPassword = Console.ReadLine();
+        if (validateUser(custId, givenPassword))
+        {
+            if (givenPassword == "Test1")
+            {
+                Console.WriteLine("Change your password");
+                string newPassword = Console.ReadLine();
+                ChangeCustomerPassword(custId, newPassword);
+            }
+            do
+            {
+                Console.WriteLine("Choose the operation to Perform 1.Add Balance 2.Withdraw Balance 3.Show Balance");
+                int option = Convert.ToInt32(System.Console.ReadLine());
+                switch (option)
+                {
+                    case 1:
+                        AddCustomerBalance();
+                        break;
+                    case 2:
+                        WithDrawCustomerBalance();
+                        break;
+                    case 3:
+                        ShowCustomerBalance();
+                        break;
+                    default:
+                        Console.WriteLine("Invalid Option");
+                        break;
+                }
+                Console.WriteLine(" type y to contine");
+                choose = Console.ReadLine();
+            } while (choose == "y");
+        }
+    }
     private void AddCustomerBalance()
     {
         try
@@ -198,6 +222,36 @@ internal class Program
             Console.WriteLine($"Cusomer Balance is: {bal}");
         }
         catch (Exception e) { }
-
     }
+    private void ChangeCustomerPassword(int givencustId, string newPassword)
+    {
+        try
+        {
+
+            Customer c = new Customer() { CustomerId = givencustId, Password = newPassword };
+            r.ChangePassword(c);
+            Console.WriteLine($"Password has been changed successfully");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine($"Password has been unchanged.please try again");
+
+        }
+    }
+    private bool validateUser(int givencustId, string givenPassword)
+    {
+        try
+        {
+            Customer c = new Customer() { CustomerId = givencustId, Password = givenPassword };
+            bool status = r.IsValidUser(c);
+            return status;
+        }
+        catch (Exception e)
+        {
+            return false;
+
+        }
+    }
+    #endregion
+
 }

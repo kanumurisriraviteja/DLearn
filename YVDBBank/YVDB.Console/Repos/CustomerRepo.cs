@@ -19,7 +19,7 @@ public class CustomerRepo : ICustomerRepoRBI
             Age = 10,
             accountType = AccountType.Savings,
             phoneNo = 123,
-            Passsword = "Test1",
+            Password = "Test1",
             Balance = 10000
         });
 
@@ -38,23 +38,38 @@ public class CustomerRepo : ICustomerRepoRBI
 
     public override void AddBalance(int CustomerId, double Balance)
     {
-        Customer customer = _cust.Find(x => x.CustomerId == CustomerId);
+        Customer customer = _cust.Find(x => x.CustomerId == CustomerId) ?? new Customer() { };
         customer.Balance += Balance;
 
     }
 
     public override void WithDrawBalance(int CustomerId, double Balance)
     {
-        Customer customer = _cust.Find(x => x.CustomerId == CustomerId);
+        Customer customer = _cust.Find(x => x.CustomerId == CustomerId) ?? new Customer() { };
         customer.Balance -= Balance;
     }
     public override double ShowBalance(int CustomerId)
     {
-        Customer customer = _cust.Find(x => x.CustomerId == CustomerId);
+        Customer customer = _cust.Find(x => x.CustomerId == CustomerId) ?? new Customer() { };
         return customer.Balance;
     }
     public List<Customer> GiveCustomers()
     {
         return _cust;
+    }
+
+    public void ChangePassword(Customer c)
+    {
+        Customer customer = _cust.Find(x => x.CustomerId == c.CustomerId) ?? new Customer() { };
+        customer.Password = c.Password;
+
+    }
+
+    public bool IsValidUser(Customer c)
+    {
+        Customer customer = _cust.Find(x => x.CustomerId == c.CustomerId) ?? new Customer() { Password = "" };
+        bool isvalid = customer.Password == c.Password;
+        return isvalid;
+
     }
 }
