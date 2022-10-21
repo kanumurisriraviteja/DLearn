@@ -1,3 +1,5 @@
+******************C#**********************
+
 1. Learn High Level Architecture of .NET
 2. Installation of Tools, Basic GIT  - Hello World
 3. GIT Installation, pull request
@@ -28,9 +30,14 @@
 15. Multithreading,concurrency,parallemism
 16. File Handling
 ==============================================================================================================================
-SQL
+******************SQL**********************
+
 1. Installation of SQL Server, CRUD Topics
 2. Constraints
 3. JOINS
 4. GROUP BY,SQL Execution,NULL Handling,Stored Procedures,Functions
 ==============================================================================================================================
+Console Application Real time Project
+==============================================================================================================================
+******************WEB API**********************
+1. Basic JSON syntax,Created a web api project

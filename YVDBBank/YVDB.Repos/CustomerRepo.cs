@@ -1,8 +1,8 @@
 using System;
-using YVDB.Console.Models;
-using YVDB.Console.IRepos;
+using YVDB.Models;
+using YVDB.Repos.IRepos;
 
-namespace YVDB.Console.Repos;
+namespace YVDB.Repos;
 
 public class CustomerRepo : ICustomerRepoRBI
 {
@@ -17,6 +17,18 @@ public class CustomerRepo : ICustomerRepoRBI
             Address = new List<Address>() { new Address() { HNo = "1", State = "Telanga", Type = AddType.Temporary }, new Address() { HNo = "2", State = "AP", Type = AddType.Permanent } },
             Aadhar = 123,
             Age = 10,
+            accountType = AccountType.Savings,
+            phoneNo = 123,
+            Password = "Test1",
+            Balance = 10000
+        });
+        _cust.Add(new Customer()
+        {
+            CustomerId = 2,
+            Name = "Venkat",
+            Address = new List<Address>() { new Address() { HNo = "1", State = "Telanga", Type = AddType.Temporary }, new Address() { HNo = "2", State = "AP", Type = AddType.Permanent } },
+            Aadhar = 123,
+            Age = 30,
             accountType = AccountType.Savings,
             phoneNo = 123,
             Password = "Test1",

@@ -1,0 +1,22 @@
+Data:  XML,JSON
+===============================================
+Why : To trasact Data between different entities
+
+Sample JSON:
+
+{
+	
+	"CustomerId" :1,
+	"Name" : "Te",
+	"Address" : 
+	[
+	 { "HNO":"1-2","State":"ap","Type":"Temporary"},
+	 { "HNO":"1-2","State":"ap","Type":"Permanent"}
+	],
+    "IsValid":true,
+    "Phone":null
+}
+
+API : Application Programming Interface
+MVC : Model View Controller
+ASP.net WEB API CORE 

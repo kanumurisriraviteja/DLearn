@@ -1,4 +1,4 @@
-namespace YVDB.Console.IRepos;
+namespace YVDB.Repos.IRepos;
 
 public interface ICustomerRepoWorld
 {

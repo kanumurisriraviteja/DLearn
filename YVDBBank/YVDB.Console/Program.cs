@@ -1,5 +1,5 @@
-﻿using YVDB.Console.Models;
-using YVDB.Console.Repos;
+﻿using YVDB.Models;
+using YVDB.Repos;
 
 internal class Program
 {
