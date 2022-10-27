@@ -10,4 +10,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\YVDB.Models\YVDB.Models.csproj" />
+    <ProjectReference Include="..\YVDB.Repos\YVDB.Repos.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -20,3 +20,9 @@ Sample JSON:
 API : Application Programming Interface
 MVC : Model View Controller
 ASP.net WEB API CORE 
+
+In WEB API we would not have session persistance.
+
+Postman,Fiddler,Swagger(OPEN API)
+==========================================================================================
+client, server client-server architecture

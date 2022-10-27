@@ -44,7 +44,7 @@ internal class Program
     }
 
 
-    #region Employye Region
+    #region Employee Region
     private void EmployeeLogic()
     {
         Console.WriteLine("Please Enter Your Password");
