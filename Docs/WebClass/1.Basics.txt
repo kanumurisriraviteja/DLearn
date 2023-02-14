@@ -26,3 +26,8 @@ In WEB API we would not have session persistance.
 Postman,Fiddler,Swagger(OPEN API)
 ==========================================================================================
 client, server client-server architecture
+Request: HttpVerb,Headers,content
+Response: StatusCode,Headers,content 
+
+HttpVerb : HTTPGET,HTTPPOST,HTTPPUT,HTTPDELETE,HTTPPATCH
+Headers  : content Type,content Length,Authorization,Accept.

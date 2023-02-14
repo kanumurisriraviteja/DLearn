@@ -41,7 +41,7 @@ class _5Operators
         Console.WriteLine("a: {0}", a);
 
         int a11 = a--;
-        Console.WriteLine("post ince: {0}", a11);
+        Console.WriteLine("post dec: {0}", a11);
         Console.WriteLine("a : {0}", a);
         //Arithmetic Operators -- end
 
@@ -49,8 +49,8 @@ class _5Operators
 
         bool c = true;
         string d = "test";
-        float e = 10.5f;
-        double f = 55.44d;
+        float e = 9.5f;
+        double f = 9.0d;
         if (a == f) { Console.WriteLine("Equal"); }  //valid
         if (a == e) { Console.WriteLine("Equal"); }  //valid
         // if (a == d) { Console.WriteLine("Equal"); }  //Error
