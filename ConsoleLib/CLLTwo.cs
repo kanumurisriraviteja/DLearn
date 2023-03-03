@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace ConsoleLib
 {
-    public class CLLTwo : Nsl
+    public class CLLTwo : _4Nsl
     {
         public void Learn()
         {
-            Nsl o1 = new Nsl();
+            _4Nsl o1 = new _4Nsl();
             Console.WriteLine(o1.a1); // Accessable
             //Console.WriteLine(o1.a2); // Error Priavte not Accessable
             //Console.WriteLine(o1.a3); // Error protected not accesable

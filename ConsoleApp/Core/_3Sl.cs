@@ -18,12 +18,15 @@ static class _3Sl
     //}
 
     // Error -> static class can't have instance constructor
-    //_3Sl()
-    //{
+    // _3Sl()
+    // {
 
-    //}
+    // }
     public static void Learn()
     {
+
+      // Error -> static variables are defined at the class level
+        //static int d = 10;
         int a1 = 2;
         Console.WriteLine(a1);
     }

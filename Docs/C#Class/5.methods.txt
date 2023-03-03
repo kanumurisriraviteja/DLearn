@@ -9,8 +9,8 @@ non static/ instance
 2. In a non static class> no restriction
 3. If you want to access a non static variable/method, you should do it via the object 
 4. If you want to access a static variable/method you should call it via the class name
-5. for the satatic variable you will have only one copy of memory.
-6. for the non static variables you will have individual copies of memory.
+5. for the satatic variable/method you will have only one copy of memory.
+6. for the non static variables/method you will have individual copies of memory.
 ===============================================================================================
 variables : 
 1. static       > only one copy of memory

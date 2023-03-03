@@ -8,7 +8,7 @@ class _9DatastrLearn
 {
     public void Learn()
     {
-        // ArrayLearn();
+         // ArrayLearn();
         //ArrayListLearn();
         //ListLearn();
         //EQCLearn();
@@ -19,10 +19,10 @@ class _9DatastrLearn
 
     private void ArrayLearn()
     {
-        //oneDArray();
+        // oneDArray();
         // twoDArrary();
         // JaggedArrary();
-        ArrayImp();
+        // ArrayImp();
     }
     private void oneDArray()
     {
@@ -33,7 +33,7 @@ class _9DatastrLearn
         i0[1] = 31;
         //i0[10] = 55; // Runtime IndexOutOfRangeException
 
-        int[] i1 = new int[] { 41, 31 };
+        int[] i1 = new int[] { 41, 31 }; 
         int[] i2 = i1;
         i2[0] = 51;
         Console.WriteLine($"the element in i1 -0 location  is {i1[0]}");
@@ -161,7 +161,7 @@ class _9DatastrLearn
     {
 
         ArrayList a1 = new ArrayList();
-        a1[0] = "kanumuri";
+        // a1[0] = "kanumuri";
         a1.Add(1);
         a1.Add("Teja");
         a1.Add(5.2f);
@@ -189,15 +189,16 @@ class _9DatastrLearn
     private void ListLearn()
     {
         List<int> l1 = new List<int>();
-        l1.Add(1);
-        l1.Add(2);
-        l1.Add(3);
-        l1.Add(4);
+        l1.Add(11);
+        l1.Add(12);
+        l1.Add(13);
+        l1.Add(14);
+        //l1.Add("test");Error
 
-        l1[0] = 5;
+        l1[0] = 15;
 
         l1.RemoveAt(0); // Index
-        l1.Remove(4);   // data
+        l1.Remove(14);   // data
         foreach (var item in l1)
         {
            Console.WriteLine(item);
@@ -235,7 +236,7 @@ class _9DatastrLearn
 
         List<Employee> l5 = new List<Employee>();
         l5.AddRange(l4);
-        bool a = l5.Contains(new Employee() { EmployyeId = 5 });
+        bool a = l5.Contains(new Employee() { EmployyeId = 5,Name="Teja" });
         Employee l6 = l5.Find(x => x.EmployyeId == 5);
         l5.FindAll(x => x.Salary > 4);
         l5.Remove(new Employee() { EmployyeId = 5 });
@@ -371,6 +372,7 @@ class _9DatastrLearn
 
         int[] arr1 = new int[6] { 5, 8, 9, 25, 0, 7 };
         int[] arr2 = (int[])arr1.Clone();
+        int[] arr3 = arr1.Clone() as int[]; 
         Array.Sort(arr1);
 
         Array.Sort<int>(arr1, new Comparison<int>(
@@ -384,7 +386,7 @@ class _9DatastrLearn
         Array.Clear(arr1); // empty an array
 
         Array.Reverse(arr2);
-
+        
 
         Employee[] employees = new Employee[6];
     }
