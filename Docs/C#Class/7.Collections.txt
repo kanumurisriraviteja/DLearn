@@ -4,14 +4,15 @@
 Array      	-> same data type(Generic)          , index based, 		Fixed length  -> 1D,multi D,Jaggged , cant delete an element
 ArrarList  	-> Different data type(non Generic) , index based, 		Any length, can perform all CRUD
 List       	-> same data type(Generic)          , index based, 		Any length
+HashSet     -> same data type(Generic)          , non index based, 		Any length, Duplicates are not stored
 
 IEnumerable -> same data type(Generic)          , non index based, 		Any length, Data can't be initialized after its declared
 IQueryable  -> same data type(Generic)          , non index based, 		Any length, Data can't be initialized after its declared,Holds good to process large data.
 ICollection -> same data type(Generic)          , non index based,  Any length
 
-HashSet     -> same data type(Generic)          , non index based, 		Any length, Duplicates are not stored
 HashTable   -> Different data type(non Generic) , key value based,  Any length
 Dictionary	-> same data type(Generic)          , key value based,  Any length
+
 Stack       -> Generic,Non Generic              , LIFO/FILO based,       Any length
 Queue       -> Generic,Non Generic              , LILO/FIFO based,       Any length
 

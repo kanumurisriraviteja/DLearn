@@ -1,0 +1,20 @@
+DevOps       			> ADO intro,Jenkins intro,CI/CD
+Git,GitHub,Pull Request,Branching, Merging, Fork
+ADO Oraganization creation,project,users creation
+Project Methodology  	> Waterfall, Scrum, Agile
+ADO Overview Blade 		> Summary, Dashboard creation, project wiki 	
+Azure Boards 			> Backlogs,Epic,Features,User Stories,Tasks,Bugs,work items and creating them in ADO
+						> PI Planning, Sprint Planning
+						> Shared queries, my queries
+Azure Repos				> code commit, Branching,pull requests, Branch security
+Build/Relaese Pipelines	> Dev, SIT, UAT, Prod environment
+					    > Microsoft Agent, Self-hosted Agent
+					    > pipeline classic editor,yaml configuration			
+						> creating a pipeline to push a dot net based app to Azure web APP, VM(Deployment groups), ACR, ACI 
+						> Approvals in Pipelines,Gates
+						> variable groups 
+						> Deployment stratergies
+						> Docker,Docker Hub,ACR,ACI, creating images,conatainers locally in a linux VM.
+						> Basics of kubernetes, Intro of Test Plans, Artificats, Teraform
+Azure Cloud				> VM creation,web apps,ACR,ACI, key vault, functions.
+						> Azure CLI,azure powershell,ARM templates and automation.

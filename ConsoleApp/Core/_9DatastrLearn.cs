@@ -258,6 +258,11 @@ class _9DatastrLearn
 
         //Console.WriteLine(l3[0]); // Error
 
+        // Error
+        // for(int i =0;i<l3.Count;i++)
+        // {
+        //     Console.WriteLine(l3[i]);
+        // }
         foreach (var item in l3)
         {
             Console.WriteLine(item);
@@ -310,7 +315,7 @@ class _9DatastrLearn
             Console.WriteLine(h1[item]);
         }
 
-
+        h1[1] = "test";
         Dictionary<int, string> d1 = new Dictionary<int, string>();
         d1.Add(1, "test1");
         d1.Add(200, "test2");
@@ -340,7 +345,7 @@ class _9DatastrLearn
         s1.Push("test3");
         s1.Push("test4");
 
-        s1.Pop();
+        Console.WriteLine(s1.Pop());
 
         foreach (var item in s1)
         {
@@ -358,7 +363,7 @@ class _9DatastrLearn
         s3.Enqueue("test4");
 
 
-        s3.Dequeue();
+        Console.WriteLine(s3.Dequeue());
 
         foreach (var item in s3)
         {
