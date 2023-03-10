@@ -26,8 +26,8 @@ public class Program : Object
     {
         // DOM();
         //Logic();
-        //oopsPrinciples();
-        others();
+        oopsPrinciples();
+        //others();
         //MultiEval();
     }
 
@@ -123,6 +123,7 @@ public class Program : Object
         o2.m4();//This is m4 method in _12oopsbase class
         o2.m5();//This is m5 method in _12oopsbase class
         o2.m6();//This is m6 method in _12oopsbase class
+        o2.m7();//This is m7 method in _12oopsbase class
 
         TestOne o1 = new TestOne();
         o1.m1();//This is m1 method in _12oopsbase class:10
@@ -131,6 +132,7 @@ public class Program : Object
         o1.m4();//This is m4 method in Testone class
         o1.m5();//This is m5 method in Testone class
         o1.m6();//This is m6 method in Testone class
+        o1.m7();//This is m7 method in Testone class
 
         _12oopsbase o4 = new TestOne();
         o4.m1();//This is m1 method in _12oopsbase class:10
@@ -139,6 +141,7 @@ public class Program : Object
         o4.m4();//This is m4 method in Testone class       // method overriding 
         o4.m5();//This is m5 method in _12oopsbase class
         o4.m6(); //This is m6 method in _12oopsbase class
+        o4.m7();//This is m7 method in _12oopsbase class
 
 
         // TestOne o5 = new _12oopsbase(); // Error - compiletime

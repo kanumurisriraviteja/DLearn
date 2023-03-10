@@ -12,7 +12,7 @@ public class _12oopsbase
 
     public _12oopsbase(string message)
     {
-         Console.WriteLine(message);
+        Console.WriteLine(message);
 
     }
     public void m1()
@@ -40,6 +40,11 @@ public class _12oopsbase
         Console.WriteLine("This is m6 method in _12oopsbase class");
     }
 
+    public virtual void m7()
+    {
+        Console.WriteLine("This is m7 method in _12oopsbase class");
+    }
+
 }
 
 public class TestOne : _12oopsbase
@@ -51,7 +56,7 @@ public class TestOne : _12oopsbase
 
     public TestOne(string message) : base(message)
     {
-        
+
     }
     public int a2 = 30;
     public void m2()
@@ -81,6 +86,11 @@ public class TestOne : _12oopsbase
     public void m6()
     {
         Console.WriteLine("This is m6 method in Testone class");
+    }
+
+    public void m7()
+    {
+        Console.WriteLine("This is m7 method in Testone class");
     }
 }
 
