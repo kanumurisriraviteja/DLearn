@@ -1,5 +1,5 @@
 Instatiation cant be done for abstract class and interface
-Interface : contains on the method defination, but not implementation, who ever inherits the interface they should do the implementation
+Interface : contains only the method defination, but not implementation, who ever inherits the interface they should do the implementation
 Abstract class : may contain method defination as well as implementation, who ever inherits the abstract class , 
                  they should implement the abstract methods
 

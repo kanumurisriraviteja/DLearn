@@ -153,6 +153,11 @@ public class Program : Object
         o3.m1();
         o3.m2();
 
+      // Calling constructor
+        Console.WriteLine("Calling constructor");
+        TestOne o11 = new TestOne();
+        TestOne o12 = new TestOne("Hi we are learning parameterised const");
+
     }
 
 
@@ -160,13 +165,6 @@ public class Program : Object
     {
         // string a = "teja";
         // Console.WriteLine(a.CountVowels(a));
-
-
-        // // Calling constructor
-        // Console.WriteLine("Calling constructor");
-        // TestOne o11 = new TestOne();
-        // TestOne o12 = new TestOne("Hi we are learning parameterised const");
-
 
         // // Accessing from enum
         // System.Console.WriteLine(_14en.Jan);
