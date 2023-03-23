@@ -1,19 +1,27 @@
 ﻿using ConsoleApp.Core;
 using ConsoleApp.Test;
 using ConsoleApp.PracProg;
+using System.Threading;
 
 namespace ConsoleApp;
 public class Program : Object
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("==Hello World==");
-        Program p = new Program();
-        p.Learn();
-        //p.Practise();
+        try
+        {
+            Console.WriteLine("==Hello World==");
+            Program p = new Program();
+            p.Learn();
+            //p.Practise();
 
-        Console.WriteLine("==Bye==");
-        Console.ReadLine();
+            Console.WriteLine("==Bye==");
+            Console.ReadLine();
+        }
+        catch (Exception ex)
+        {
+            System.Console.WriteLine(ex.Message);
+        }
     }
 
     private void Practise()
@@ -25,10 +33,11 @@ public class Program : Object
     private void Learn()
     {
         // DOM();
-        //Logic();
-        oopsPrinciples();
-        //others();
-        //MultiEval();
+        // Logic();
+        // oopsPrinciples();
+        // ELD();
+        // MultiEval();
+        // others();
     }
 
     private void DOM()
@@ -92,12 +101,12 @@ public class Program : Object
     }
     private void Logic()
     {
-        //    _6DecL decL = new _6DecL();
-        //    decL.Learn();
-        //    _7Lpl l1 = new _7Lpl();
-        //    l1.Learn();
-        //    _8StrLearn s = new _8StrLearn();
-        //    s.Learn();
+        _6DecL decL = new _6DecL();
+        decL.Learn();
+        _7Lpl l1 = new _7Lpl();
+        l1.Learn();
+        _8StrLearn s = new _8StrLearn();
+        s.Learn();
         _9DatastrLearn ds = new _9DatastrLearn();
         ds.Learn();
     }
@@ -153,50 +162,55 @@ public class Program : Object
         o3.m1();
         o3.m2();
 
-      // Calling constructor
+        // Calling constructor
         Console.WriteLine("Calling constructor");
         TestOne o11 = new TestOne();
         TestOne o12 = new TestOne("Hi we are learning parameterised const");
 
     }
 
-
-    private void others()
+    private void ELD()
     {
-        // string a = "teja";
-        // Console.WriteLine(a.CountVowels(a));
+        // Accessing from enum
+        System.Console.WriteLine(_14en.Jan);
 
-        // // Accessing from enum
-        // System.Console.WriteLine(_14en.Jan);
+        _15Ex a1 = new _15Ex();
+        a1.Learn();
 
-        // _15Ex a1 = new _15Ex();
-        // a1.Learn();
-
-
-        //// Indexers
-        // _17Ind ic = new _17Ind();
-        // ic.valuearr = new string[] { "C", "CPP", "c#" }; // without indexer 
-
-        // foreach (var i in ic.valuearr)
-        // {
-        //     System.Console.WriteLine(i);
-        // }
-        // // with indexer
-        // ic[0] = "C";
-        // ic[1] = "CPP";
-        // ic[2] = "CSHARP";
-
-        // System.Console.WriteLine(ic[0]);
+        _20lam lam = new _20lam();
+        lam.Learn();
 
         _18Del del = new _18Del();
         del.Learn();
+
+    }
+    private void others()
+    {
+        // Indexers
+        _17Ind ic = new _17Ind();
+        ic.valuearr = new string[] { "C", "CPP", "c#" }; // without indexer 
+
+        foreach (var i in ic.valuearr)
+        {
+            System.Console.WriteLine(i);
+        }
+        // with indexer
+        ic[0] = "C";
+        ic[1] = "CPP";
+        ic[2] = "CSHARP";
+
+        System.Console.WriteLine(ic[0]);
+
+        // Extensions Methods - Created in the static class _3Sl
+        // This acts like a method extension
+        string a = "teja";
+        Console.WriteLine(a.CountVowels(a));
     }
 
     private void MultiEval()
     {
         _16Mult _16Mult = new _16Mult();
-        // _16Mult.Learn(); // Multi Threading
-
+        _16Mult.Learn(); // Multi Threading
         _16Mult.Learn4();// concurrent programming
 
     }

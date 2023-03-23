@@ -25,7 +25,7 @@ static class _3Sl
     public static void Learn()
     {
 
-      // Error -> static variables are defined at the class level
+        // Error -> static variables are defined at the class level
         //static int d = 10;
         int a1 = 2;
         Console.WriteLine(a1);
@@ -38,8 +38,8 @@ static class _3Sl
     // }
 
 
-
-    public static int CountVowels(this string t, string value) 
+    // this is a extension method for the string type in the static class
+    public static int CountVowels(this string t, string value)
     {
         string myStr;
         int i, len, vowel_count, cons_count;
@@ -59,8 +59,6 @@ static class _3Sl
                 cons_count++;
             }
         }
-
         return vowel_count;
     }
-     
 }

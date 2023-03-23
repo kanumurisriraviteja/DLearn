@@ -41,8 +41,9 @@ public class _16Mult
         t4.Start();
 
         t1.Join();
-        t2.Join(10);
-        t3.Join(10);
+        t2.Join();
+        // t3.Join(10); This is would wait only for 10 millisecond if not completed the next steps would be resumed
+        t3.Join();
         t4.Join();
         s2.Stop();
 
@@ -55,7 +56,7 @@ public class _16Mult
         //lock (o1)
         //{
         //Thread.Sleep(1000);
-        for (int i = 0; i < 10000; i++)
+        for (int i = 0; i < 10; i++)
         {
             System.Console.WriteLine($"Learn1 {i}");
         }
@@ -67,7 +68,7 @@ public class _16Mult
     private void Learn2()
     {
 
-        for (int i = 0; i < 1000; i++)
+        for (int i = 0; i < 100; i++)
         {
             System.Console.WriteLine($"Learn2 {i}");
         }
@@ -77,9 +78,9 @@ public class _16Mult
     private void Learn3()
     {
 
-        for (int i = 0; i < 1000000000; i++)
+        for (int i = 0; i < 1000; i++)
         {
-            //System.Console.WriteLine($"Learn3 {i}");
+            System.Console.WriteLine($"Learn3 {i}");
         }
         Console.WriteLine("Learn3");
     }
@@ -97,7 +98,7 @@ public class _16Mult
         Learn1();
         Learn2();
         _ = Task.Run(Learn1);
-        Task.Run(() => Learn2());
+        _ = Task.Run(() => Learn2());
 
         await Task.Run(() => System.Console.WriteLine($"Learn5 called"));
         //}
@@ -112,13 +113,5 @@ public class _16Mult
             System.Console.WriteLine($"Learn1 {i}");
         }
         Console.WriteLine("Learn1");
-    }
-
-
-
-    private bool isEven(int a) 
-    { 
-  
-        return a% 2 == 0;
     }
 }

@@ -74,6 +74,9 @@ public class _15Ex
 
     }
 
+
+    // creating custom exception
+
     [Serializable]
     class NameException : Exception
     {
