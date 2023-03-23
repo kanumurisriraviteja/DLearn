@@ -211,8 +211,7 @@ public class Program : Object
     {
         _16Mult _16Mult = new _16Mult();
         _16Mult.Learn(); // Multi Threading
-        _16Mult.Learn4();// concurrent programming
-
+        _16Mult.LearnMt();// async , wait, task
     }
 
 }

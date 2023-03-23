@@ -85,33 +85,110 @@ public class _16Mult
         Console.WriteLine("Learn3");
     }
 
-    public void Learn4()
+    public async void LearnMt()
     {
-        Learn5();
+        // SyncCall();
+        ASyncCall();
+
     }
-
-    private async void Learn5()
+    private static async Task ASyncCall()
     {
-        //for (int i = 0; i < 100; i++)
-        //{
+        Console.WriteLine("ASyncCall=======Start");
 
-        Learn1();
-        Learn2();
-        _ = Task.Run(Learn1);
-        _ = Task.Run(() => Learn2());
-
+        //scenario -1:
+        _ = Task.Run(m1);
+        _ = Task.Run(() => m2());
         await Task.Run(() => System.Console.WriteLine($"Learn5 called"));
-        //}
-        Console.WriteLine("Learn5");
+
+        //scenario -2:
+        Task t1 = Task.Run(m1);
+        Task t2 = Task.Run(() => m2());
+        await Task.Run(() => System.Console.WriteLine($"Learn5 called"));
+        Task.WaitAll(t1, t2);  // this is the step that await for t1,t2
+
+        //scenarion -3:
+        // asawtLearn();
+        await asawtLearn();  // if we dont await then the next steps is called before the completion of asawtLearn
+        Console.WriteLine("ASyncCall=======End");
+    }
+    private void SyncCall()
+    {
+        int i1 = m1();
+        int i2 = m2();
+        int i3 = m3(i1, i2);
+        System.Console.WriteLine(i3);
     }
 
-    private void Learn6()
+    private static async Task asawtLearn()
+    {
+        System.Console.WriteLine("asawtLearn=======Start");
+        await Task.Delay(1000);
+        System.Console.WriteLine("m1-1== called");
+        int i1 = m1();
+        System.Console.WriteLine("m2-1== called");
+        int i2 = m2();
+        System.Console.WriteLine("m3-1== called");
+        int i3 = m3(i1, i2);
+        System.Console.WriteLine(i3);
+
+        System.Console.WriteLine("m1-2== called");
+        Task<int> t1 = Task.Run(m1);
+        System.Console.WriteLine("m2-2== called");
+        Task<int> t2 = Task.Run(m2);
+        System.Console.WriteLine("m3-2== sc1 = called");
+        Task.WaitAll(t1, t2);
+        int i4_0 = m3(t1.Result, t2.Result);
+        System.Console.WriteLine(i4_0);
+        // await m3(t1.Result, t2.Result); //Error here m3 should be of task
+        System.Console.WriteLine("m3-2== sc2 = called");
+        int i4_1 = await m3Async(t1.Result, t2.Result);
+        System.Console.WriteLine(i4_1);
+
+        System.Console.WriteLine("m1-3== called");
+        // int i5 = m1Async().GetAwaiter().GetResult(); // it will wait till the result is available
+        Task<int> i5 = m1Async(); // next steps would be resumed 
+        System.Console.WriteLine("m2-3== called");
+        int i6 = m2Async().GetAwaiter().GetResult(); // it will wait till the result is available
+        System.Console.WriteLine("m3-3== called");
+        int i7 = await m3Async(i5.Result, i6);
+        System.Console.WriteLine(i7);
+
+        System.Console.WriteLine("asawtLearn=======End");
+
+    }
+    private static int m1()
+    {
+        Thread.Sleep(10000);
+        Console.WriteLine("m1 is called");
+        return 5;
+    }
+    private static int m2()
     {
 
-        for (int i = 0; i < 100; i++)
-        {
-            System.Console.WriteLine($"Learn1 {i}");
-        }
-        Console.WriteLine("Learn1");
+        Console.WriteLine("m2 is called");
+        return 15;
     }
+    private static int m3(int a, int b)
+    {
+        Console.WriteLine("m3 is called");
+        return a + b;
+    }
+    private static async Task<int> m1Async()
+    {
+        await Task.Delay(10000);
+        Console.WriteLine("m1 is called");
+        return 5;
+    }
+    private static async Task<int> m2Async()
+    {
+        Console.WriteLine("m2 is called");
+        return 15;
+    }
+    private static async Task<int> m3Async(int a, int b)
+    {
+        Console.WriteLine("m3 is called");
+        int resut = a + b;
+        return resut;
+    }
+
 }

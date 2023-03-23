@@ -2,8 +2,8 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace ConsoleApp.Core;
 public struct _13stru
-{    
-    int a;
+{
+    int i1;
 
     public void Learn()
     {
