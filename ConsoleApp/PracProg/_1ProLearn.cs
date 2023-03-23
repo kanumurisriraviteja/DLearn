@@ -5,7 +5,7 @@ class _1ProLearn
     public void Learn()
     {
         //ReverString();
-        Console.WriteLine(Fact(5));
+        // Console.WriteLine(Fact(5));
     }
 
 
