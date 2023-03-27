@@ -106,6 +106,18 @@ class _2DataType
         else
             num3 = (double)num1;
 
+
+        // Tuples
+        (int, string) t1 = (5, "test");
+        Console.WriteLine(t1.Item1);
+        Console.WriteLine(t1.Item2);
+
+        var t = (Sum: 4.5, Count: 3);
+        Console.WriteLine($"Sum of {t.Count} elements is {t.Sum}.");
+
+        (double Sum, int Count) d = (4.5, 3);
+        Console.WriteLine($"Sum of {d.Count} elements is {d.Sum}.");
+
     }
 
 }

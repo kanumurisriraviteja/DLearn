@@ -26,7 +26,7 @@
                        Abstraction, 
                        Encapsulation.
 13. Exception Handling
-14. this operator,partial class,Extension methods,delegates,Indexes
+14. this operator,partial class,Extension methods,delegates,Indexes,refout parameters
 15. Multithreading,concurrency,parallemism
 16. File Handling
 ==============================================================================================================================

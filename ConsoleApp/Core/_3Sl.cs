@@ -37,7 +37,23 @@ static class _3Sl
 
     // }
 
+    // this is a extension method for zeros.
+    public static int Countzeros(this int t)
+    {
+        int number = 1020405;
+        int count = 0;
 
+        while (number != 0)
+        {
+            if (number % 10 == 0)
+            {
+                count++;
+            }
+            number /= 10;
+        }
+
+       return count;
+    }
     // this is a extension method for the string type in the static class
     public static int CountVowels(this string t, string value)
     {

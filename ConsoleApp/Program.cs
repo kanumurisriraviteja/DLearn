@@ -186,25 +186,13 @@ public class Program : Object
     }
     private void others()
     {
-        // Indexers
-        _17Ind ic = new _17Ind();
-        ic.valuearr = new string[] { "C", "CPP", "c#" }; // without indexer 
+        // Indexers   
+        // IndLearn();
 
-        foreach (var i in ic.valuearr)
-        {
-            System.Console.WriteLine(i);
-        }
-        // with indexer
-        ic[0] = "C";
-        ic[1] = "CPP";
-        ic[2] = "CSHARP";
+        // Tuples, Extension Methods
+        _21Others _Others = new _21Others();
+        _Others.Learn();
 
-        System.Console.WriteLine(ic[0]);
-
-        // Extensions Methods - Created in the static class _3Sl
-        // This acts like a method extension
-        string a = "teja";
-        Console.WriteLine(a.CountVowels(a));
     }
 
     private void MultiEval()
@@ -212,6 +200,28 @@ public class Program : Object
         _16Mult _16Mult = new _16Mult();
         _16Mult.Learn(); // Multi Threading
         _16Mult.LearnMt();// async , wait, task
+    }
+
+    private void IndLearn()
+    {
+        // Indexers
+        _17Ind ic = new _17Ind();
+
+        // without indexer 
+        ic.setData(0, "c");
+        ic.setData(1, "CPP");
+        ic.setData(2, "c#");
+        Console.WriteLine(ic.getData(0));
+
+        // with indexer
+        ic[0] = "C";
+        ic[1] = "CPP";
+        ic[2] = "CSHARP";
+
+        Console.WriteLine(ic[0]);
+
+        ic.getEmpSal(1, "Sri");
+        Console.WriteLine(ic[1, "sri"]);
     }
 
 }

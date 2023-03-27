@@ -31,10 +31,6 @@ class _20lam
                                         return item * 10;
                                     }
                                 }).ToList();
-
-        Func<int, string> f1 = x => x > 0 ? "positive" : x < 0 ? "negative" : "zero";
-        System.Console.WriteLine(f1(1));
-
     }
 
     public static List<int> TestL(List<int> l2)

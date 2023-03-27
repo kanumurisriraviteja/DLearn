@@ -12,17 +12,17 @@ namespace ConsoleApp.Core
         public void Learn()
         {
             m1("test");
-
             TestDel test = new TestDel(m1);
             Action<string> action = m1;
             test("test");
-
             TestDel1 testDel1 = new TestDel1(m2);
             TestDel1 testDel3 = m2;
             testDel1("test");
 
             Func<string, int> func1 = m4;
             int a = func1("testy");
+            Func<int, string> f1 = x => x > 0 ? "positive" : x < 0 ? "negative" : "zero";
+            System.Console.WriteLine(f1(1));
 
             TestDel2 testDel2 = new TestDel2(m3);
             testDel2("test");
@@ -30,8 +30,6 @@ namespace ConsoleApp.Core
             Predicate<string> a1 = m3;
             bool a2 = a1("tte");
 
-
-           
         }
 
         public delegate void TestDel(string s);
@@ -63,9 +61,9 @@ namespace ConsoleApp.Core
         }
 
 
-        public void m5(Action action) 
-        { 
-        
+        public void m5(Action action)
+        {
+
         }
     }
 }

@@ -1,7 +1,7 @@
 using ConsoleApp.Core;
 namespace ConsoleApp.Test;
 
-public class Employee 
+public partial class Employee 
 {
     private int Id;
 
