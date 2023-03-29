@@ -17,7 +17,9 @@
           struct
           list 
           IEnumerable
-          ICollection,
+          ICollection
+          Hash Table
+          Hash Set
           stack
           queue
           dictionary
@@ -26,7 +28,7 @@
                        Abstraction, 
                        Encapsulation.
 13. Exception Handling
-14. this operator,partial class,Extension methods,delegates,Indexes,refout parameters
+14. this operator,partial class,Extension methods,delegates,Indexes,refout parameters,lambda.
 15. Multithreading,concurrency,parallemism
 16. File Handling
 ==============================================================================================================================
