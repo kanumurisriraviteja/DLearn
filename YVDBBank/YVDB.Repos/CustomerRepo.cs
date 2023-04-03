@@ -13,7 +13,7 @@ public class CustomerRepo : ICustomerRepoRBI
         _cust.Add(new Customer()
         {
             CustomerId = 1,
-            Name = "Yag",
+            Name = "A",
             Address = new List<Address>() { new Address() { HNo = "1", State = "Telanga", Type = AddType.Temporary }, new Address() { HNo = "2", State = "AP", Type = AddType.Permanent } },
             Aadhar = 123,
             Age = 10,
@@ -25,7 +25,7 @@ public class CustomerRepo : ICustomerRepoRBI
         _cust.Add(new Customer()
         {
             CustomerId = 2,
-            Name = "Venkat",
+            Name = "B",
             Address = new List<Address>() { new Address() { HNo = "1", State = "Telanga", Type = AddType.Temporary }, new Address() { HNo = "2", State = "AP", Type = AddType.Permanent } },
             Aadhar = 123,
             Age = 30,
@@ -44,7 +44,7 @@ public class CustomerRepo : ICustomerRepoRBI
     }
     public void AddCustomer(Customer customer)
     {
-        customer.CustomerId = (_cust.MaxBy(x => x.CustomerId) ?? new Customer() { CustomerId = 0 }).CustomerId + 1;
+        customer.CustomerId = (_cust.MaxBy(x => x.CustomerId) ?? new Customer() { CustomerId = 1 }).CustomerId + 1;
         _cust.Add(customer);
     }
 

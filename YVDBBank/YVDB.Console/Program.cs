@@ -19,28 +19,33 @@ internal class Program
     }
     private void Logic()
     {
-        string? opt;
-        Console.WriteLine("Hi Welcome to YVDB Bank");
-        do
+        try
         {
-            Console.WriteLine("Click 1 for Customer, 2. For Employee");
-            int user = Convert.ToInt32(System.Console.ReadLine());
+            string? opt;
+            Console.WriteLine("Hi Welcome to YVDB Bank");
+            do
+            {
+                Console.WriteLine("Click 1 for Customer, 2. For Employee");
+                int user = Convert.ToInt32(System.Console.ReadLine());
 
-            if (user == 1)
-            {
-                CustomerLogic();
-            }
-            else if (user == 2)
-            {
-                EmployeeLogic();
-            }
-            else
-            {
-                Console.WriteLine("Invalid Option");
-            }
-            Console.WriteLine(" type y to contine");
-            opt = Console.ReadLine();
-        } while (opt == "y");
+                if (user == 1)
+                {
+                    CustomerLogic();
+                }
+                else if (user == 2)
+                {
+                    EmployeeLogic();
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Option");
+                }
+                Console.WriteLine(" type y to contine");
+                opt = Console.ReadLine();
+            } while (opt == "y");
+        }
+        catch (Exception e) { Console.WriteLine("An Error Has occured"); }
+        finally { Console.WriteLine("Thanks for interaction"); }
     }
 
 
@@ -69,7 +74,7 @@ internal class Program
                         Console.WriteLine("Invalid Option");
                         break;
                 }
-                Console.WriteLine(" type y to contine");
+                Console.WriteLine(" type y to continue");
                 choose = Console.ReadLine();
             } while (choose == "y");
         }

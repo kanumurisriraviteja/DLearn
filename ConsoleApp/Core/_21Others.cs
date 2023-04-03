@@ -76,5 +76,19 @@ namespace ConsoleApp.Core
             i14_0 = i11 + i12;
             i14_1 = i11 * i12;
         }
+
+        private void Others()
+        {
+            System.Console.WriteLine(Math.PI);
+
+            Random rand = new Random();
+             int randomNumber = rand.Next(1, 101); // generates a random number between 1 and 100
+            Console.WriteLine("Random number: " + randomNumber);
+
+            // If we use seed the same no is generated every time, after the program is being stopped
+            Random  r = new Random(50);
+            System.Console.WriteLine(r.Next(50,60)); // Here min is 50 and max is 60
+            System.Console.WriteLine(r.Next()); // no min and max
+        }
     }
 }

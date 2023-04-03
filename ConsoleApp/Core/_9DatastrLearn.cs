@@ -8,7 +8,7 @@ class _9DatastrLearn
 {
     public void Learn()
     {
-         // ArrayLearn();
+        // ArrayLearn();
         //ArrayListLearn();
         //ListLearn();
         //EQCLearn();
@@ -33,7 +33,7 @@ class _9DatastrLearn
         i0[1] = 31;
         //i0[10] = 55; // Runtime IndexOutOfRangeException
 
-        int[] i1 = new int[] { 41, 31 }; 
+        int[] i1 = new int[] { 41, 31 };
         int[] i2 = i1;
         i2[0] = 51;
         Console.WriteLine($"the element in i1 -0 location  is {i1[0]}");
@@ -201,14 +201,19 @@ class _9DatastrLearn
         l1.Remove(14);   // data
         foreach (var item in l1)
         {
-           Console.WriteLine(item);
+            Console.WriteLine(item);
         }
 
         for (int i = 0; i < l1.Count; i++)
         {
-           Console.WriteLine(l1[i]);
+            Console.WriteLine(l1[i]);
         }
+        var ascendingOrder = l1.OrderBy(i => i);
+        var descendingOrder = l1.OrderByDescending(i => i);
+        // Without Linq
 
+        l1.Sort((a, b) => a.CompareTo(b)); // ascending sort
+        l1.Sort((a, b) => b.CompareTo(a)); // descending sort
         List<int> l2 = new List<int>() { 1, 2, 3 };
         l2.Add(4);
 
@@ -236,7 +241,7 @@ class _9DatastrLearn
 
         List<Employee> l5 = new List<Employee>();
         l5.AddRange(l4);
-        bool a = l5.Contains(new Employee() { EmployyeId = 5,Name="Teja" });
+        bool a = l5.Contains(new Employee() { EmployyeId = 5, Name = "Teja" });
         Employee l6 = l5.Find(x => x.EmployyeId == 5);
         l5.FindAll(x => x.Salary > 4);
         l5.Remove(new Employee() { EmployyeId = 5 });
@@ -377,7 +382,7 @@ class _9DatastrLearn
 
         int[] arr1 = new int[6] { 5, 8, 9, 25, 0, 7 };
         int[] arr2 = (int[])arr1.Clone();
-        int[] arr3 = arr1.Clone() as int[]; 
+        int[] arr3 = arr1.Clone() as int[];
         Array.Sort(arr1);
 
         Array.Sort<int>(arr1, new Comparison<int>(
@@ -391,7 +396,7 @@ class _9DatastrLearn
         Array.Clear(arr1); // empty an array
 
         Array.Reverse(arr2);
-        
+
 
         Employee[] employees = new Employee[6];
     }
