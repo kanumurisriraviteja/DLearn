@@ -3,13 +3,15 @@ using YVDB.Repos;
 
 internal class Program
 {
-    private readonly CustomerRepo r;
+    private readonly CustomerRepo cr;
+    private readonly EmployeeRepo er;
     private const string BankEmployeePassword = "Test123";
     private int custId;
 
     public Program()
     {
-        r = new CustomerRepo();
+        cr = new CustomerRepo();
+        er = new EmployeeRepo();
     }
     static void Main(string[] args)
     {
@@ -136,7 +138,7 @@ internal class Program
             }
             c.Password = "Test1";
             c.Balance = 10000;
-            r.AddCustomer(c);
+            er.AddCustomer(c);
         }
         catch (Exception e)
         {
@@ -145,7 +147,7 @@ internal class Program
     }
     public void ShowCustomers()
     {
-        List<Customer> c = r.GiveCustomers();
+        List<Customer> c = er.GiveCustomers();
 
         foreach (var item in c)
         {
@@ -201,7 +203,7 @@ internal class Program
         {
             Console.WriteLine("Enter Balance to be added");
             double balance = Convert.ToDouble(System.Console.ReadLine());
-            r.AddBalance(custId, balance);
+            cr.AddBalance(custId, balance);
 
         }
         catch (Exception e) { }
@@ -213,7 +215,7 @@ internal class Program
         {
             Console.WriteLine("Enter Balance to be WithDrawn");
             double balance = Convert.ToDouble(System.Console.ReadLine());
-            r.WithDrawBalance(custId, balance);
+            cr.WithDrawBalance(custId, balance);
 
         }
         catch (Exception e) { }
@@ -223,7 +225,7 @@ internal class Program
     {
         try
         {
-            double bal = r.ShowBalance(custId);
+            double bal = cr.ShowBalance(custId);
             Console.WriteLine($"Cusomer Balance is: {bal}");
         }
         catch (Exception e) { }
@@ -234,7 +236,7 @@ internal class Program
         {
 
             Customer c = new Customer() { CustomerId = givencustId, Password = newPassword };
-            r.ChangePassword(c);
+            cr.ChangePassword(c);
             Console.WriteLine($"Password has been changed successfully");
         }
         catch (Exception e)
@@ -248,7 +250,7 @@ internal class Program
         try
         {
             Customer c = new Customer() { CustomerId = givencustId, Password = givenPassword };
-            bool status = r.IsValidUser(c);
+            bool status = cr.IsValidCustomer(c);
             return status;
         }
         catch (Exception e)

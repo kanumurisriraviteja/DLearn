@@ -12,6 +12,8 @@ public class Customer
 
     //public List<string> Address { get; set; }
     public List<Address>? Address { get; set; }
+    public int? AccType { get; set; }
+
     public double Aadhar { get; set; }
 
     private int _Age;
