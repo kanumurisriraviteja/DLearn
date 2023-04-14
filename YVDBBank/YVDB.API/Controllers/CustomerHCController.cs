@@ -10,11 +10,11 @@ namespace YVDB.API.Controllers
     [ApiController]
     public class CustomerHCController : ControllerBase
     {
-        private readonly CustomerRepo cr;
+        private readonly ICustomerRepoRBI cr;
         private readonly ILogger<CustomerHCController> _logger;
-        public CustomerHCController(ILogger<CustomerHCController> logger)
+        public CustomerHCController(ILogger<CustomerHCController> logger, ICustomerRepoRBI customerRepoRBI)
         {
-            cr = new CustomerRepo();
+            cr = customerRepoRBI;
             _logger = logger;
         }
 

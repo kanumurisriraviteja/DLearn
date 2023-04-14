@@ -1,3 +1,8 @@
+using Microsoft.EntityFrameworkCore;
+using System.Configuration;
+using YVDB.Repos;
+using YVDB.Repos.IRepos;
+
 namespace YVDB.API
 {
     public class Program
@@ -12,6 +17,10 @@ namespace YVDB.API
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            //builder.Services.AddDbContext<DbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            builder.Services.AddSingleton<ICustomerRepoRBI, CustomerRepo>();
+            builder.Services.AddSingleton<IEmployeeRepo, EmployeeRepo>();
 
             var app = builder.Build();
 

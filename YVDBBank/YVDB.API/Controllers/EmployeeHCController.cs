@@ -11,9 +11,9 @@ namespace YVDB.API.Controllers
     {
         private readonly IEmployeeRepo er;
         private readonly ILogger<EmployeeHCController> _logger;
-        public EmployeeHCController(ILogger<EmployeeHCController> logger)
+        public EmployeeHCController(ILogger<EmployeeHCController> logger, IEmployeeRepo erepo)
         {
-            er = new EmployeeRepo();
+            er = erepo;
             _logger = logger;
         }
 
