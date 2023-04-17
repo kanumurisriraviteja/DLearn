@@ -8,18 +8,18 @@ namespace YVDB.API.Controllers
 {
     [Route("[controller]/[action]")]
     [ApiController]
-    public class CustomerHCController : ControllerBase
+    public class CustomerController : ControllerBase
     {
         private readonly ICustomerRepoRBI cr;
-        private readonly ILogger<CustomerHCController> _logger;
-        public CustomerHCController(ILogger<CustomerHCController> logger, ICustomerRepoRBI customerRepoRBI)
+        private readonly ILogger<CustomerController> _logger;
+        public CustomerController(ILogger<CustomerController> logger, ICustomerRepoRBI customerRepoRBI)
         {
             cr = customerRepoRBI;
             _logger = logger;
         }
 
-        [HttpPost(Name = "AddHCBalance")]
-        public IActionResult AddCustomerHCBalance(int custId, int balance)
+        [HttpPost(Name = "AddBalance")]
+        public IActionResult AddCustomerBalance(int custId, int balance)
         {
             try
             {
@@ -29,7 +29,7 @@ namespace YVDB.API.Controllers
             catch (Exception e) { return BadRequest(); }
 
         }
-        [HttpPost(Name = "WithDrawHCBalance")]
+        [HttpPost(Name = "WithDrawBalance")]
         public IActionResult WithDrawCustomerBalance(int custId, int balance)
         {
             try
@@ -42,7 +42,7 @@ namespace YVDB.API.Controllers
 
         }
 
-        [HttpGet(Name = "ShowHCBalance")]
+        [HttpGet(Name = "ShowBalance")]
         public IActionResult ShowCustomerBalance(int custId)
         {
             try

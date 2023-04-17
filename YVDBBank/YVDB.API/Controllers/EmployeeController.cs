@@ -7,25 +7,25 @@ namespace YVDB.API.Controllers
 {
     [Route("[controller]/[action]")]
     [ApiController]
-    public class EmployeeHCController : ControllerBase
+    public class EmployeeController : ControllerBase
     {
         private readonly IEmployeeRepo er;
-        private readonly ILogger<EmployeeHCController> _logger;
-        public EmployeeHCController(ILogger<EmployeeHCController> logger, IEmployeeRepo erepo)
+        private readonly ILogger<EmployeeController> _logger;
+        public EmployeeController(ILogger<EmployeeController> logger, IEmployeeRepo erepo)
         {
             er = erepo;
             _logger = logger;
         }
 
-        [HttpGet(Name = "ShowHCCustomers")]
-        public List<Customer> ShowStaticCustomers()
+        [HttpGet(Name = "ShowCustomers")]
+        public List<Customer> ShowCustomers()
         {
             return er.GiveCustomers();
 
         }
 
-        [HttpPost(Name = "AddHCCustomers")]
-        public IActionResult AddStaticCustomer([FromBody] Customer cus)
+        [HttpPost(Name = "AddCustomers")]
+        public IActionResult AddCustomer([FromBody] Customer cus)
         {
             try
             {
