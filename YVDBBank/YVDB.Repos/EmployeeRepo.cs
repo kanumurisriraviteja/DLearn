@@ -11,7 +11,7 @@ namespace YVDB.Repos
 {
     public class EmployeeRepo : IEmployeeRepo
     {
-        private List<Customer> _cust = new List<Customer>();
+        private List<CustomerDTO> _cust = new List<CustomerDTO>();
         public CustomerData CustomerData { get; }
         public EmployeeRepo()
         {
@@ -19,13 +19,13 @@ namespace YVDB.Repos
             _cust = CustomerData.GetCustomers();
 
         }
-        public List<Customer> GiveCustomers()
+        public List<CustomerDTO> GiveCustomers()
         {
             return _cust;
         }
-        public void AddCustomer(Customer customer)
+        public void AddCustomer(CustomerDTO customer)
         {
-            customer.CustomerId = (_cust.MaxBy(x => x.CustomerId) ?? new Customer() { CustomerId = 1 }).CustomerId + 1;
+            customer.CustomerId = (_cust.MaxBy(x => x.CustomerId) ?? new CustomerDTO() { CustomerId = 1 }).CustomerId + 1;
             _cust.Add(customer);
         }
     }

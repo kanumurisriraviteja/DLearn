@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace YVDB.Models;
 
-public class Customer
+public class CustomerDTO
 {
     public int CustomerId { get; set; }
     public string? Name { get; set; }

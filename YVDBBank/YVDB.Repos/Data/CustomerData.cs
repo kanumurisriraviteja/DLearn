@@ -12,11 +12,11 @@ namespace YVDB.Repos.Data
         private static CustomerData instance = null;
         private static readonly object padlock = new object();
 
-        private List<Customer> _cust = new List<Customer>();
+        private List<CustomerDTO> _cust = new List<CustomerDTO>();
         private static IDictionary<int, double>? _intrestRate;
         private CustomerData()
         {
-            _cust.Add(new Customer()
+            _cust.Add(new CustomerDTO()
             {
                 CustomerId = 1,
                 Name = "A",
@@ -28,7 +28,7 @@ namespace YVDB.Repos.Data
                 Password = "Test1",
                 Balance = 10000
             });
-            _cust.Add(new Customer()
+            _cust.Add(new CustomerDTO()
             {
                 CustomerId = 2,
                 Name = "B",
@@ -48,7 +48,7 @@ namespace YVDB.Repos.Data
             _intrestRate.Add((int)AccountType.Senior, 4);
         }
 
-        public List<Customer> GetCustomers()
+        public List<CustomerDTO> GetCustomers()
         {
             return _cust;
         }

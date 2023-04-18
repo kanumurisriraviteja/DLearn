@@ -9,7 +9,7 @@ namespace YVDB.Repos.IRepos
 {
     public interface IEmployeeRepo
     {
-        List<Customer> GiveCustomers();
-         void AddCustomer(Customer customer);
+        List<CustomerDTO> GiveCustomers();
+         void AddCustomer(CustomerDTO customer);
     }
 }

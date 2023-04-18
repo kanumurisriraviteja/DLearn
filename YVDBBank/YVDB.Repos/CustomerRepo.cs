@@ -8,7 +8,7 @@ namespace YVDB.Repos;
 public class CustomerRepo : ICustomerRepoRBI
 {
     private static IDictionary<int, double> _intrestRate;
-    private List<Customer> _cust = new List<Customer>();
+    private List<CustomerDTO> _cust = new List<CustomerDTO>();
 
     public CustomerData CustomerData { get; }
 
@@ -21,33 +21,33 @@ public class CustomerRepo : ICustomerRepoRBI
 
     public override void AddBalance(int CustomerId, double Balance)
     {
-        Customer customer = _cust.Find(x => x.CustomerId == CustomerId) ?? new Customer() { };
+        CustomerDTO customer = _cust.Find(x => x.CustomerId == CustomerId) ?? new CustomerDTO() { };
         customer.Balance += Balance;
 
     }
 
     public override void WithDrawBalance(int CustomerId, double Balance)
     {
-        Customer customer = _cust.Find(x => x.CustomerId == CustomerId) ?? new Customer() { };
+        CustomerDTO customer = _cust.Find(x => x.CustomerId == CustomerId) ?? new CustomerDTO() { };
         customer.Balance -= Balance;
     }
     public override double ShowBalance(int CustomerId)
     {
-        Customer customer = _cust.Find(x => x.CustomerId == CustomerId) ?? new Customer() { };
+        CustomerDTO customer = _cust.Find(x => x.CustomerId == CustomerId) ?? new CustomerDTO() { };
         return customer.Balance;
     }
 
 
-    public void ChangePassword(Customer c)
+    public void ChangePassword(CustomerDTO c)
     {
-        Customer customer = _cust.Find(x => x.CustomerId == c.CustomerId) ?? new Customer() { };
+        CustomerDTO customer = _cust.Find(x => x.CustomerId == c.CustomerId) ?? new CustomerDTO() { };
         customer.Password = c.Password;
 
     }
 
-    public bool IsValidCustomer(Customer c)
+    public bool IsValidCustomer(CustomerDTO c)
     {
-        Customer customer = _cust.Find(x => x.CustomerId == c.CustomerId) ?? new Customer() { Password = "" };
+        CustomerDTO customer = _cust.Find(x => x.CustomerId == c.CustomerId) ?? new CustomerDTO() { Password = "" };
         bool isvalid = customer.Password == c.Password;
         return isvalid;
 

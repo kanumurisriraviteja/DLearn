@@ -20,8 +20,8 @@ namespace YVDB.API
             //builder.Services.AddDbContext<DbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             builder.Services.AddSingleton<ICustomerRepoRBI, CustomerRepo>();
-            //builder.Services.AddSingleton<IEmployeeRepo, EmployeeRepo>();
-            builder.Services.AddSingleton<IEmployeeRepo, EmployeeRepoDapper>();
+            builder.Services.AddSingleton<IEmployeeRepo, EmployeeRepo>();
+            //builder.Services.AddSingleton<IEmployeeRepo, EmployeeRepoDapper>();
 
             var app = builder.Build();
 

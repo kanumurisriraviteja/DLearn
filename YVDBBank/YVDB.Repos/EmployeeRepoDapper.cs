@@ -11,12 +11,12 @@ namespace YVDB.Repos
 {
     public class EmployeeRepoDapper : IEmployeeRepo
     {
-        public List<Customer> GiveCustomers()
+        public List<CustomerDTO> GiveCustomers()
         {
-            GenericDapper<Customer> gd = new GenericDapper<Customer>();
-            return gd.SQLQueryAsync("select * from Customer").Result.ToList<Customer>();
+            GenericDapper<CustomerDTO> gd = new GenericDapper<CustomerDTO>();
+            return gd.SQLQueryAsync("select * from Customer").Result.ToList<CustomerDTO>();
         }
-        public void AddCustomer(Customer customer)
+        public void AddCustomer(CustomerDTO customer)
         {
 
         }

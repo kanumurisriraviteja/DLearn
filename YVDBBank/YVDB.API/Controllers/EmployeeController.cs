@@ -18,20 +18,20 @@ namespace YVDB.API.Controllers
         }
 
         [HttpGet(Name = "ShowCustomers")]
-        public List<Customer> ShowCustomers()
+        public List<CustomerDTO> ShowCustomers()
         {
             return er.GiveCustomers();
 
         }
 
         [HttpPost(Name = "AddCustomers")]
-        public IActionResult AddCustomer([FromBody] Customer cus)
+        public IActionResult AddCustomer([FromBody] CustomerDTO cus)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    Customer c = new Customer
+                    CustomerDTO c = new CustomerDTO
                     {
                         Name = cus.Name,
                         Address = cus.Address,

@@ -89,7 +89,7 @@ internal class Program
     {
         try
         {
-            Customer c = new Customer();
+            CustomerDTO c = new CustomerDTO();
             Console.WriteLine("Enter Your Name");
             c.Name = Console.ReadLine();
             Console.WriteLine("Enter Your Addrees Type 1 for Temporary, 2 for Permanent");
@@ -147,7 +147,7 @@ internal class Program
     }
     public void ShowCustomers()
     {
-        List<Customer> c = er.GiveCustomers();
+        List<CustomerDTO> c = er.GiveCustomers();
 
         foreach (var item in c)
         {
@@ -235,7 +235,7 @@ internal class Program
         try
         {
 
-            Customer c = new Customer() { CustomerId = givencustId, Password = newPassword };
+            CustomerDTO c = new CustomerDTO() { CustomerId = givencustId, Password = newPassword };
             cr.ChangePassword(c);
             Console.WriteLine($"Password has been changed successfully");
         }
@@ -249,7 +249,7 @@ internal class Program
     {
         try
         {
-            Customer c = new Customer() { CustomerId = givencustId, Password = givenPassword };
+            CustomerDTO c = new CustomerDTO() { CustomerId = givencustId, Password = givenPassword };
             bool status = cr.IsValidCustomer(c);
             return status;
         }
